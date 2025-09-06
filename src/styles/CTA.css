@@ -1,0 +1,227 @@
+.cta {
+  background: linear-gradient(135deg, var(--chocolate-brown) 0%, var(--light-wood) 100%);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="5" cy="5" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+}
+
+.cta__content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cta__title {
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.cta__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.cta__features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.cta__feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.cta__feature-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.cta__feature-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 3px;
+  color: var(--white);
+}
+
+.cta__feature-text p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.cta__buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta__btn-primary {
+  background-color: var(--white);
+  color: var(--chocolate-brown);
+  font-weight: 600;
+  padding: 15px 30px;
+  border-radius: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta__btn-primary:hover {
+  background-color: #f8f8f8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cta__btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+  font-weight: 500;
+  padding: 13px 25px;
+  border-radius: 25px;
+}
+
+.cta__btn-secondary:hover {
+  background-color: var(--white);
+  color: var(--chocolate-brown);
+}
+
+.cta__image {
+  position: relative;
+}
+
+.cta__image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.cta__img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cta__image-container:hover .cta__img {
+  transform: scale(1.05);
+}
+
+.cta__badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(10px);
+  color: var(--chocolate-brown);
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta__badge span {
+  font-size: 1.2rem;
+}
+
+.cta__badge strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cta__badge small {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 968px) {
+  .cta__content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .cta__image {
+    order: -1;
+  }
+
+  .cta__title {
+    font-size: 2.5rem;
+  }
+
+  .cta__img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cta__title {
+    font-size: 2rem;
+  }
+
+  .cta__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cta__buttons {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta__btn-primary,
+  .cta__btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .cta__features {
+    gap: 15px;
+  }
+
+  .cta__feature {
+    padding: 12px;
+  }
+
+  .cta__badge {
+    position: static;
+    margin: 20px auto 0;
+    width: fit-content;
+  }
+}
