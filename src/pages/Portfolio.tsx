@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/Portfolio.css';
 
 const Portfolio: React.FC = () => {
@@ -225,7 +226,7 @@ const Portfolio: React.FC = () => {
                   <div className="portfolio-card__header">
                     <h3 className="portfolio-card__title">{item.title}</h3>
                     <div className="portfolio-card__meta">
-                      <span className="portfolio-card__location">📍 {item.location}</span>
+                      <span className="portfolio-card__location"><FaIcons.FaMapMarkerAlt style={{marginRight: '4px'}} /> {item.location}</span>
                       <span className="portfolio-card__duration">⏱️ {item.duration}</span>
                     </div>
                   </div>
@@ -253,9 +254,9 @@ const Portfolio: React.FC = () => {
             <div className="portfolio-modal__header">
               <h2>{selectedPortfolioItem.title}</h2>
               <div className="portfolio-modal__meta">
-                <span>📍 {selectedPortfolioItem.location}</span>
+                <span><FaIcons.FaMapMarkerAlt style={{marginRight: '4px'}} /> {selectedPortfolioItem.location}</span>
                 <span>⏱️ {selectedPortfolioItem.duration}</span>
-                <span>👥 {selectedPortfolioItem.client}</span>
+                <span><FaIcons.FaUsers style={{marginRight: '4px'}} /> {selectedPortfolioItem.client}</span>
               </div>
             </div>
 
@@ -289,7 +290,7 @@ const Portfolio: React.FC = () => {
                 <h3>Solutions apportées</h3>
                 <ul>
                   {selectedPortfolioItem.solutions.map((solution, i) => (
-                    <li key={i}>✓ {solution}</li>
+                    <li key={i}><FaIcons.FaCheck style={{marginRight: '8px'}} /> {solution}</li>
                   ))}
                 </ul>
               </div>

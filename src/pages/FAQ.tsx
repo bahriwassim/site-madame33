@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/FAQ.css';
 
 const FAQ: React.FC = () => {
@@ -143,7 +144,7 @@ const FAQ: React.FC = () => {
               </p>
               <div className="faq-intro__contact">
                 <a href="tel:+352691210680" className="btn btn-primary">
-                  📞 +352 691 210 680
+                  <FaIcons.FaPhone style={{marginRight: '8px'}} /> +352 691 210 680
                 </a>
                 <a href="/contact" className="btn btn-secondary">
                   Poser une question

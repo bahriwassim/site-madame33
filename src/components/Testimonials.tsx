@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/Testimonials.css';
 
 const Testimonials: React.FC = () => {
@@ -112,7 +113,7 @@ const Testimonials: React.FC = () => {
             <span className="testimonials-stat__label">Taux de satisfaction</span>
           </div>
           <div className="testimonials-stat">
-            <span className="testimonials-stat__number">5★</span>
+            <span className="testimonials-stat__number">5<FaIcons.FaStar style={{marginLeft: '4px'}} /></span>
             <span className="testimonials-stat__label">Note moyenne</span>
           </div>
         </div>

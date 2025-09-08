@@ -1,29 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/ServicesSection.css';
 
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      icon: '🍳',
+      icon: <FaIcons.FaUtensils />,
       title: 'Organisation Cuisine',
       description: 'Optimisation des rangements, tri des ustensiles et création d\'un espace fonctionnel pour cuisiner en toute sérénité.',
       features: ['Réorganisation placards', 'Tri des ustensiles', 'Étiquetage personnalisé']
     },
     {
-      icon: '👗',
+      icon: <FaIcons.FaTshirt />,
       title: 'Dressing',
       description: 'Tri de votre garde-robe, organisation par catégories et conseils pour un dressing pratique et esthétique.',
       features: ['Tri des vêtements', 'Organisation saisons', 'Optimisation espace']
     },
     {
-      icon: '🧸',
+      icon: <FaIcons.FaChild />,
       title: 'Chambre Enfants',
       description: 'Création d\'espaces ludiques et organisés pour favoriser l\'autonomie et le bien-être de vos enfants.',
       features: ['Rangement jouets', 'Zone devoirs', 'Organisation vêtements']
     },
     {
-      icon: '🧺',
+      icon: <FaIcons.FaHome />,
       title: 'Buanderie',
       description: 'Structuration de votre espace buanderie pour une gestion efficace du linge et des produits d\'entretien.',
       features: ['Organisation produits', 'Système de tri', 'Optimisation circuits']
@@ -67,7 +68,7 @@ const ServicesSection: React.FC = () => {
               <p className="service-card__description">{service.description}</p>
               <ul className="service-card__features">
                 {service.features.map((feature, i) => (
-                  <li key={i}>✓ {feature}</li>
+                  <li key={i}><FaIcons.FaCheck style={{marginRight: '8px'}} /> {feature}</li>
                 ))}
               </ul>
             </div>

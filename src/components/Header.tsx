@@ -15,6 +15,10 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <div className="container">
@@ -24,13 +28,13 @@ const Header: React.FC = () => {
           </Link>
           
           <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>
-            <Link to="/" className="header__nav-link">Accueil</Link>
-            <Link to="/a-propos" className="header__nav-link">À propos</Link>
-            <Link to="/services" className="header__nav-link">Services</Link>
-            <Link to="/portfolio" className="header__nav-link">Portfolio</Link>
-            <Link to="/blog" className="header__nav-link">Blog</Link>
-            <Link to="/faq" className="header__nav-link">FAQ</Link>
-            <Link to="/contact" className="header__nav-link btn btn-primary">Contact</Link>
+            <Link to="/" className="header__nav-link" onClick={handleLinkClick}>Accueil</Link>
+            <Link to="/a-propos" className="header__nav-link" onClick={handleLinkClick}>À propos</Link>
+            <Link to="/services" className="header__nav-link" onClick={handleLinkClick}>Services</Link>
+            <Link to="/portfolio" className="header__nav-link" onClick={handleLinkClick}>Portfolio</Link>
+            <Link to="/blog" className="header__nav-link" onClick={handleLinkClick}>Blog</Link>
+            <Link to="/faq" className="header__nav-link" onClick={handleLinkClick}>FAQ</Link>
+            <Link to="/contact" className="header__nav-link btn btn-primary" onClick={handleLinkClick}>Contact</Link>
           </nav>
 
           <button

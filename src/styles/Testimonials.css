@@ -204,4 +204,9 @@
   .testimonials-stat__number {
     font-size: 2rem;
   }
+
+  .testimonials-navigation {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
 }

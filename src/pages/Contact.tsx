@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/Contact.css';
 
 interface FormData {
@@ -100,7 +101,7 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="contact-info__section">
-                <h3>📞 Contact direct</h3>
+                <h3><FaIcons.FaPhone style={{marginRight: '8px'}} /> Contact direct</h3>
                 <div className="contact-direct">
                   <a href="tel:+352691210680" className="contact-direct__phone">
                     +352 691 210 680
@@ -111,17 +112,17 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="contact-info__section">
-                <h3>🗺️ Zones d'intervention</h3>
+                <h3><FaIcons.FaMap style={{marginRight: '8px'}} /> Zones d'intervention</h3>
                 <ul className="contact-zones">
-                  <li>🇫🇷 Paris et région parisienne</li>
-                  <li>🇫🇷 Clouange</li>
-                  <li>🇱🇺 Luxembourg</li>
-                  <li>💻 En ligne (monde entier)</li>
+                  <li><FaIcons.FaFlag style={{marginRight: '8px'}} /> Paris et région parisienne</li>
+                  <li><FaIcons.FaFlag style={{marginRight: '8px'}} /> Clouange</li>
+                  <li><FaIcons.FaFlag style={{marginRight: '8px'}} /> Luxembourg</li>
+                  <li><FaIcons.FaLaptop style={{marginRight: '8px'}} /> En ligne (monde entier)</li>
                 </ul>
               </div>
 
               <div className="contact-info__section">
-                <h3>⏰ Délais d'intervention</h3>
+                <h3><FaIcons.FaClock style={{marginRight: '8px'}} /> Délais d'intervention</h3>
                 <div className="contact-timing">
                   <div className="timing-item">
                     <strong>Urgence :</strong> 24-48h
@@ -136,13 +137,13 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="contact-info__section">
-                <h3>💡 Ce qui est inclus</h3>
+                <h3><FaIcons.FaLightbulb style={{marginRight: '8px'}} /> Ce qui est inclus</h3>
                 <ul className="contact-included">
-                  <li>✓ Devis gratuit et sans engagement</li>
-                  <li>✓ Première consultation téléphonique offerte</li>
-                  <li>✓ Plan d'action personnalisé</li>
-                  <li>✓ Suivi post-intervention inclus</li>
-                  <li>✓ Conseils de maintien sur mesure</li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Devis gratuit et sans engagement</li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Première consultation téléphonique offerte</li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Plan d'action personnalisé</li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Suivi post-intervention inclus</li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Conseils de maintien sur mesure</li>
                 </ul>
               </div>
             </div>
@@ -260,13 +261,13 @@ const Contact: React.FC = () => {
 
                 {submitStatus === 'success' && (
                   <div className="form-message form-message--success">
-                    ✅ Votre demande a été envoyée avec succès ! Je vous recontacte dans les 24h.
+                    <FaIcons.FaCheckCircle style={{marginRight: '8px'}} /> Votre demande a été envoyée avec succès ! Je vous recontacte dans les 24h.
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
                   <div className="form-message form-message--error">
-                    ❌ Une erreur s'est produite. Veuillez réessayer ou me contacter directement.
+                    <FaIcons.FaTimesCircle style={{marginRight: '8px'}} /> Une erreur s'est produite. Veuillez réessayer ou me contacter directement.
                   </div>
                 )}
 
@@ -288,7 +289,7 @@ const Contact: React.FC = () => {
               n'hésitez pas à m'appeler. Je suis à votre écoute !
             </p>
             <a href="tel:+352691210680" className="btn btn-secondary btn-large">
-              📞 Appeler maintenant : +352 691 210 680
+              <FaIcons.FaPhone style={{marginRight: '8px'}} /> Appeler maintenant : +352 691 210 680
             </a>
           </div>
         </div>

@@ -1,12 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/Services.css';
 
 const Services: React.FC = () => {
   const services = [
     {
       id: 1,
-      icon: '🍳',
+      icon: <FaIcons.FaUtensils />,
       title: 'Organisation Cuisine',
       description: 'Optimisation des rangements, tri des ustensiles et création d\'un espace fonctionnel.',
       features: [
@@ -22,7 +23,7 @@ const Services: React.FC = () => {
     },
     {
       id: 2,
-      icon: '👗',
+      icon: <FaIcons.FaTshirt />,
       title: 'Dressing & Placards',
       description: 'Tri de votre garde-robe et organisation optimale de vos espaces de rangement.',
       features: [
@@ -38,7 +39,7 @@ const Services: React.FC = () => {
     },
     {
       id: 3,
-      icon: '🧸',
+      icon: <FaIcons.FaChild />,
       title: 'Chambre Enfants',
       description: 'Création d\'espaces ludiques et organisés pour favoriser l\'autonomie.',
       features: [
@@ -54,7 +55,7 @@ const Services: React.FC = () => {
     },
     {
       id: 4,
-      icon: '🧺',
+      icon: <FaIcons.FaHome />,
       title: 'Buanderie',
       description: 'Structuration de votre espace buanderie pour une gestion efficace du linge.',
       features: [
@@ -132,7 +133,7 @@ const Services: React.FC = () => {
 
                 <ul className="service-detailed__features">
                   {service.features.map((feature, i) => (
-                    <li key={i}>✓ {feature}</li>
+                    <li key={i}><FaIcons.FaCheck style={{marginRight: '8px'}} /> {feature}</li>
                   ))}
                 </ul>
 
@@ -193,7 +194,7 @@ const Services: React.FC = () => {
                   <h4>Avantages :</h4>
                   <ul>
                     {prestation.advantages.map((advantage, i) => (
-                      <li key={i}>✓ {advantage}</li>
+                      <li key={i}><FaIcons.FaCheck style={{marginRight: '8px'}} /> {advantage}</li>
                     ))}
                   </ul>
                 </div>
@@ -220,7 +221,7 @@ const Services: React.FC = () => {
                 Demander un devis gratuit
               </Link>
               <a href="tel:+352691210680" className="btn btn-secondary">
-                📞 +352 691 210 680
+                <FaIcons.FaPhone style={{marginRight: '8px'}} /> +352 691 210 680
               </a>
             </div>
           </div>

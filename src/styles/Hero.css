@@ -190,4 +190,8 @@
   .hero__value p {
     font-size: 0.8rem;
   }
+
+  .hero__indicators {
+    bottom: 80px;
+  }
 }

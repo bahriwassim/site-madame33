@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/Hero.css';
 
 const Hero: React.FC = () => {
@@ -80,19 +81,19 @@ const Hero: React.FC = () => {
         <div className="container">
           <div className="hero__values-grid">
             <div className="hero__value">
-              <h3>💝 Amour</h3>
+              <h3><FaIcons.FaHeart style={{marginRight: '8px'}} /> Amour</h3>
               <p>Avec passion et bienveillance</p>
             </div>
             <div className="hero__value">
-              <h3>👨‍👩‍👧‍👦 Famille</h3>
+              <h3><FaIcons.FaUsers style={{marginRight: '8px'}} /> Famille</h3>
               <p>Pour tous les membres de votre foyer</p>
             </div>
             <div className="hero__value">
-              <h3>✨ Créativité</h3>
+              <h3><FaIcons.FaMagic style={{marginRight: '8px'}} /> Créativité</h3>
               <p>Des solutions innovantes et personnalisées</p>
             </div>
             <div className="hero__value">
-              <h3>🔒 Sécurité</h3>
+              <h3><FaIcons.FaShieldAlt style={{marginRight: '8px'}} /> Sécurité</h3>
               <p>Confidentialité et respect total</p>
             </div>
           </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaUtensils, FaTshirt, FaChild, FaHome, FaLaptop } from 'react-icons/fa';
 import '../styles/AboutSection.css';
 
 const AboutSection: React.FC = () => {
@@ -30,11 +31,11 @@ const AboutSection: React.FC = () => {
               <div className="about-section__expertise">
                 <h3>Mon expertise</h3>
                 <ul>
-                  <li>✨ Organisation cuisine et espaces de vie</li>
-                  <li>👕 Optimisation dressing et placards</li>
-                  <li>🧸 Aménagement chambre d'enfants</li>
-                  <li>🧺 Structuration buanderie et rangements</li>
-                  <li>💻 Coaching en ligne personnalisé</li>
+                  <li><FaUtensils style={{marginRight: '8px'}} /> Organisation cuisine et espaces de vie</li>
+                  <li><FaTshirt style={{marginRight: '8px'}} /> Optimisation dressing et placards</li>
+                  <li><FaChild style={{marginRight: '8px'}} /> Aménagement chambre d'enfants</li>
+                  <li><FaHome style={{marginRight: '8px'}} /> Structuration buanderie et rangements</li>
+                  <li><FaLaptop style={{marginRight: '8px'}} /> Coaching en ligne personnalisé</li>
                 </ul>
               </div>
             </div>

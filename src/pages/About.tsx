@@ -1,4 +1,5 @@
 import React from 'react';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/About.css';
 
 const About: React.FC = () => {
@@ -47,7 +48,7 @@ const About: React.FC = () => {
           <h2 className="section-title">Mes valeurs</h2>
           <div className="values-grid">
             <div className="value-card">
-              <div className="value-card__icon">💝</div>
+              <div className="value-card__icon"><FaIcons.FaHeart /></div>
               <h3>Amour</h3>
               <p>
                 Chaque projet est mené avec passion et bienveillance. 
@@ -56,7 +57,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="value-card">
-              <div className="value-card__icon">👨‍👩‍👧‍👦</div>
+              <div className="value-card__icon"><FaIcons.FaUsers /></div>
               <h3>Famille</h3>
               <p>
                 L'organisation doit servir toute la famille. Je conçois 
@@ -65,7 +66,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="value-card">
-              <div className="value-card__icon">✨</div>
+              <div className="value-card__icon"><FaIcons.FaMagic /></div>
               <h3>Créativité</h3>
               <p>
                 Chaque espace est unique. J'apporte des solutions 
@@ -74,7 +75,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="value-card">
-              <div className="value-card__icon">🔒</div>
+              <div className="value-card__icon"><FaIcons.FaShieldAlt /></div>
               <h3>Sécurité</h3>
               <p>
                 Confidentialité et respect total de votre intimité. 
@@ -108,12 +109,12 @@ const About: React.FC = () => {
             <div className="expertise-skills">
               <h3>Mes spécialités</h3>
               <ul>
-                <li>✨ Organisation cuisine et espaces de vie</li>
-                <li>👕 Optimisation dressing et placards</li>
-                <li>🧸 Aménagement chambre d'enfants</li>
-                <li>🧺 Structuration buanderie et rangements</li>
-                <li>💻 Coaching en ligne personnalisé</li>
-                <li>🏠 Conseil en aménagement d'espace</li>
+                <li><FaIcons.FaUtensils style={{marginRight: '8px'}} /> Organisation cuisine et espaces de vie</li>
+                <li><FaIcons.FaTshirt style={{marginRight: '8px'}} /> Optimisation dressing et placards</li>
+                <li><FaIcons.FaChild style={{marginRight: '8px'}} /> Aménagement chambre d'enfants</li>
+                <li><FaIcons.FaHome style={{marginRight: '8px'}} /> Structuration buanderie et rangements</li>
+                <li><FaIcons.FaLaptop style={{marginRight: '8px'}} /> Coaching en ligne personnalisé</li>
+                <li><FaIcons.FaBuilding style={{marginRight: '8px'}} /> Conseil en aménagement d'espace</li>
               </ul>
             </div>
           </div>

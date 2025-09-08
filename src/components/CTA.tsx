@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FaPhone, FaHome, FaStar, FaBullseye } from 'react-icons/fa';
 import '../styles/CTA.css';
 
 const CTA: React.FC = () => {
@@ -16,7 +17,7 @@ const CTA: React.FC = () => {
             
             <div className="cta__features">
               <div className="cta__feature">
-                <div className="cta__feature-icon">📞</div>
+                <div className="cta__feature-icon"><FaPhone /></div>
                 <div className="cta__feature-text">
                   <h4>Consultation gratuite</h4>
                   <p>Premier échange de 15min offert</p>
@@ -24,7 +25,7 @@ const CTA: React.FC = () => {
               </div>
               
               <div className="cta__feature">
-                <div className="cta__feature-icon">🏠</div>
+                <div className="cta__feature-icon"><FaHome /></div>
                 <div className="cta__feature-text">
                   <h4>Intervention rapide</h4>
                   <p>Disponibilité sous 48h</p>
@@ -32,7 +33,7 @@ const CTA: React.FC = () => {
               </div>
               
               <div className="cta__feature">
-                <div className="cta__feature-icon">✨</div>
+                <div className="cta__feature-icon"><FaStar /></div>
                 <div className="cta__feature-text">
                   <h4>Satisfaction garantie</h4>
                   <p>Suivi personnalisé inclus</p>
@@ -45,7 +46,7 @@ const CTA: React.FC = () => {
                 Demander un devis gratuit
               </Link>
               <a href="tel:+352691210680" className="btn btn-secondary cta__btn-secondary">
-                📞 +352 691 210 680
+                <FaPhone /> +352 691 210 680
               </a>
             </div>
           </div>
@@ -58,7 +59,7 @@ const CTA: React.FC = () => {
                 className="cta__img"
               />
               <div className="cta__badge">
-                <span>🎯</span>
+                <span><FaBullseye /></span>
                 <div>
                   <strong>Résultats garantis</strong>
                   <small>ou remboursé</small>

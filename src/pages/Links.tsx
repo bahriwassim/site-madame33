@@ -1,4 +1,5 @@
 import React from 'react';
+import * as FaIcons from 'react-icons/fa';
 import '../styles/Links.css';
 
 const Links: React.FC = () => {
@@ -10,19 +11,19 @@ const Links: React.FC = () => {
           title: 'Demander un devis gratuit',
           description: 'Contactez-moi pour un devis personnalisé et sans engagement',
           url: '/contact',
-          icon: '📋'
+          icon: <FaIcons.FaClipboardList />
         },
         {
           title: 'Réserver une consultation téléphonique',
           description: 'Première consultation de 15min offerte',
           url: 'tel:+352691210680',
-          icon: '📞'
+          icon: <FaIcons.FaPhone />
         },
         {
           title: 'Découvrir nos services',
           description: 'Organisation cuisine, dressing, chambre enfants, coaching en ligne',
           url: '/services',
-          icon: '✨'
+          icon: <FaIcons.FaStar />
         }
       ]
     },
@@ -33,19 +34,19 @@ const Links: React.FC = () => {
           title: 'Mon Blog',
           description: 'Conseils et astuces pour une maison organisée',
           url: '/blog',
-          icon: '📝'
+          icon: <FaIcons.FaEdit />
         },
         {
           title: 'Questions fréquentes (FAQ)',
           description: 'Toutes les réponses à vos questions sur mes services',
           url: '/faq',
-          icon: '❓'
+          icon: <FaIcons.FaQuestionCircle />
         },
         {
           title: 'Portfolio avant/après',
           description: 'Découvrez mes réalisations et transformations',
           url: '/portfolio',
-          icon: '🏠'
+          icon: <FaIcons.FaHome />
         }
       ]
     },
@@ -56,19 +57,19 @@ const Links: React.FC = () => {
           title: 'Qui suis-je ?',
           description: 'Mon histoire, mes valeurs et ma méthode d\'organisation',
           url: '/a-propos',
-          icon: '👋'
+          icon: <FaIcons.FaHandPaper />
         },
         {
           title: 'Mes valeurs',
           description: 'Amour, Famille, Créativité, Sécurité',
           url: '/a-propos#valeurs',
-          icon: '💝'
+          icon: <FaIcons.FaHeart />
         },
         {
           title: 'Zones d\'intervention',
           description: 'Paris, Luxembourg, Clouange et en ligne',
           url: '/contact',
-          icon: '🗺️'
+          icon: <FaIcons.FaMapMarkerAlt />
         }
       ]
     },
@@ -79,21 +80,21 @@ const Links: React.FC = () => {
           title: 'Instagram',
           description: 'Suivez mes transformations et conseils du quotidien',
           url: 'https://instagram.com/mircea.organise',
-          icon: '📸',
+          icon: <FaIcons.FaInstagram />,
           external: true
         },
         {
           title: 'Facebook',
           description: 'Rejoignez la communauté des maisons organisées',
           url: 'https://facebook.com/mircea.organise',
-          icon: '📘',
+          icon: <FaIcons.FaFacebook />,
           external: true
         },
         {
           title: 'LinkedIn',
           description: 'Mon profil professionnel et mes actualités',
           url: 'https://linkedin.com/in/mircea-organise',
-          icon: '💼',
+          icon: <FaIcons.FaLinkedin />,
           external: true
         }
       ]
@@ -105,19 +106,19 @@ const Links: React.FC = () => {
           title: 'Téléphone',
           description: 'Appelez-moi directement pour un conseil immédiat',
           url: 'tel:+352691210680',
-          icon: '☎️'
+          icon: <FaIcons.FaPhone />
         },
         {
           title: 'Email',
           description: 'Envoyez-moi votre demande par email',
           url: 'mailto:contact@mircea-organise.com',
-          icon: '✉️'
+          icon: <FaIcons.FaEnvelope />
         },
         {
           title: 'WhatsApp',
           description: 'Contactez-moi via WhatsApp pour les urgences',
           url: 'https://wa.me/352691210680',
-          icon: '💬',
+          icon: <FaIcons.FaWhatsapp />,
           external: true
         }
       ]
@@ -145,8 +146,8 @@ const Links: React.FC = () => {
           </p>
           <div className="links-hero__info">
             <div className="links-hero__contact">
-              <span>📞 +352 691 210 680</span>
-              <span>✉️ contact@mircea-organise.com</span>
+              <span><FaIcons.FaPhone style={{marginRight: '4px'}} /> +352 691 210 680</span>
+              <span><FaIcons.FaEnvelope style={{marginRight: '4px'}} /> contact@mircea-organise.com</span>
             </div>
           </div>
         </div>
@@ -200,7 +201,7 @@ const Links: React.FC = () => {
                 className="btn btn-secondary"
                 onClick={() => handleLinkClick('tel:+352691210680')}
               >
-                📞 Appeler maintenant
+                <FaIcons.FaPhone style={{marginRight: '8px'}} /> Appeler maintenant
               </button>
             </div>
           </div>
