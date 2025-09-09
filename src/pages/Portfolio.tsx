@@ -9,14 +9,36 @@ const Portfolio: React.FC = () => {
   const portfolioItems = [
     {
       id: 1,
+      category: 'enfants',
+      title: 'Un espace ludique et organisé',
+      location: 'Luxembourg',
+      duration: '4h',
+      client: 'Famille Schmidt',
+      beforeImage: '/publicimages/avant-apres/Chambre des enfants/20250908_132250000_iOS.jpg',
+      afterImage: '/publicimages/avant-apres/Chambre des enfants/IMG-20250908-WA0040.jpg',
+      description: 'De la pagaille au quotidien à une chambre qui favorise l\'autonomie et la sérénité.',
+      challenges: [
+        'Enfants de 4 et 7 ans',
+        'Nombreux jouets et livres',
+        'Développer l\'autonomie'
+      ],
+      solutions: [
+        'Rangements à hauteur d\'enfant',
+        'Système de pictogrammes',
+        'Zones de jeu définies',
+        'Routine de rangement ludique'
+      ]
+    },
+    {
+      id: 2,
       category: 'cuisine',
-      title: 'Transformation cuisine moderne',
+      title: 'Une cuisine transformée',
       location: 'Paris 15ème',
       duration: '6h',
       client: 'Famille Martin',
-      beforeImage: '/publicimages/IMG_5681.JPG',
-      afterImage: '/publicimages/IMG_5682.JPG',
-      description: 'Réorganisation complète avec optimisation des rangements et création de zones fonctionnelles.',
+      beforeImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0052.jpg',
+      afterImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0056.jpg',
+      description: 'Réorganisation complète pour un espace fonctionnel et agréable à vivre.',
       challenges: [
         'Espace réduit à optimiser',
         'Nombreux ustensiles à organiser',
@@ -30,37 +52,15 @@ const Portfolio: React.FC = () => {
       ]
     },
     {
-      id: 2,
-      category: 'rangement',
-      title: 'Placard organisé avec étiquetage',
-      location: 'Luxembourg',
-      duration: '4h',
-      client: 'Mme Dubois',
-      beforeImage: '/publicimages/IMG_5683.JPG',
-      afterImage: '/publicimages/IMG_5684.JPG',
-      description: 'Système d\'étiquetage et contenants uniformisés pour un rangement efficace et durable.',
-      challenges: [
-        'Produits mélangés sans logique',
-        'Difficulté à retrouver les articles',
-        'Gaspillage par oubli'
-      ],
-      solutions: [
-        'Contenants transparents uniformes',
-        'Étiquetage bilingue',
-        'Système de rotation FIFO',
-        'Guide d\'utilisation personnalisé'
-      ]
-    },
-    {
       id: 3,
       category: 'cuisine',
-      title: 'Espace culinaire fonctionnel',
+      title: 'Fluidité retrouvée',
       location: 'Paris 11ème',
       duration: '5h',
       client: 'Couple Rousseau',
-      beforeImage: '/publicimages/IMG_5685.JPG',
-      afterImage: '/publicimages/IMG_5686.JPG',
-      description: 'Organisation par zones d\'activités pour optimiser le workflow en cuisine.',
+      beforeImage: '/publicimages/avant-apres/cuisine 2/20250908_131742000_iOS.png',
+      afterImage: '/publicimages/avant-apres/cuisine 2/IMG-20250908-WA0033.jpg',
+      description: 'Chaque placard optimisé pour cuisiner sans perte de temps.',
       challenges: [
         'Deux personnes utilisent la cuisine',
         'Matériel professionnel à intégrer',
@@ -75,68 +75,68 @@ const Portfolio: React.FC = () => {
     },
     {
       id: 4,
-      category: 'rangement',
-      title: 'Optimisation espaces multiples',
+      category: 'cuisine',
+      title: 'Un coin épices simplifié',
       location: 'Clouange',
-      duration: '8h',
-      client: 'Famille Weber',
-      beforeImage: '/publicimages/IMG_5687.JPG',
-      afterImage: '/publicimages/IMG_5688.JPG',
-      description: 'Solutions sur mesure pour optimiser chaque espace de rangement de la maison.',
+      duration: '3h',
+      client: 'Mme Dubois',
+      beforeImage: '/publicimages/avant-apres/Cuisine épices/20250908_130901000_iOS.jpg',
+      afterImage: '/publicimages/avant-apres/Cuisine épices/20250908_133850000_iOS.jpg',
+      description: 'Des étagères encombrées à un système clair et accessible au quotidien.',
       challenges: [
-        'Maison ancienne avec espaces atypiques',
-        'Famille nombreuse (4 enfants)',
-        'Budget limité pour l\'organisation'
+        'Produits mélangés sans logique',
+        'Difficulté à retrouver les épices',
+        'Gaspillage par oubli'
       ],
       solutions: [
-        'Solutions DIY économiques',
-        'Adaptation aux espaces existants',
-        'Formation de toute la famille',
-        'Suivi mensuel inclus'
+        'Contenants transparents uniformes',
+        'Étiquetage bilingue',
+        'Système de rotation FIFO',
+        'Guide d\'utilisation personnalisé'
       ]
     },
     {
       id: 5,
-      category: 'dressing',
-      title: 'Dressing familial optimisé',
+      category: 'rangement',
+      title: 'Des linges bien rangés',
       location: 'Paris 16ème',
-      duration: '6h',
+      duration: '4h',
       client: 'Famille Leroy',
-      beforeImage: '/publicimages/IMG_5689.JPG',
-      afterImage: '/publicimages/IMG_5681.JPG',
-      description: 'Organisation d\'un grand dressing familial avec espaces dédiés pour chaque membre.',
+      beforeImage: '/publicimages/avant-apres/pliages/20250908_133030000_iOS.jpg',
+      afterImage: '/publicimages/avant-apres/pliages/20250908_133052000_iOS.jpg',
+      description: 'Méthodes de pliage optimisées pour gagner de la place et de la clarté.',
       challenges: [
-        'Espace partagé entre 4 personnes',
-        'Vêtements de saisons mélangés',
-        'Manque de visibilité des articles'
+        'Linges de maison encombrants',
+        'Difficulté à retrouver les articles',
+        'Manque d\'espace de rangement'
       ],
       solutions: [
-        'Zones personnalisées par personne',
-        'Rotation saisonnière organisée',
-        'Système de tri couleur',
-        'Éclairage optimisé'
+        'Techniques de pliage optimisées',
+        'Système de tri par catégorie',
+        'Rangements verticaux',
+        'Étiquetage des contenants'
       ]
     },
     {
       id: 6,
-      category: 'enfants',
-      title: 'Chambre enfants ludique',
+      category: 'rangement',
+      title: 'Un espace apaisant',
       location: 'Luxembourg',
-      duration: '4h',
-      client: 'Famille Schmidt',
-      beforeImage: '/publicimages/IMG_5682.JPG',
-      afterImage: '/publicimages/IMG_5683.JPG',
-      description: 'Aménagement d\'une chambre d\'enfants favorisant l\'autonomie et le rangement ludique.',
+      duration: '3h',
+      client: 'Famille Weber',
+      beforeImage: '/publicimages/avant-apres/Salle de douche/20250908_133513000_iOS.jpg',
+      afterImage: '/publicimages/avant-apres/Salle de douche/20250908_133638000_iOS.jpg',
+      description: 'Organisation des produits et optimisation des rangements pour plus de confort.',
       challenges: [
-        'Enfants de 4 et 7 ans',
-        'Nombreux jouets et livres',
-        'Développer l\'autonomie'
+        'Espace réduit à optimiser',
+        'Produits de soin éparpillés',
+        'Besoin de faciliter l\'accès quotidien'
       ],
       solutions: [
-        'Rangements à hauteur d\'enfant',
-        'Système de pictogrammes',
-        'Zones de jeu définies',
-        'Routine de rangement ludique'
+        'Système de rangement vertical',
+        'Organisation par fréquence d\'usage',
+        'Contenants étanches',
+        'Étiquetage résistant à l\'humidité'
       ]
     }
   ];
@@ -145,8 +145,7 @@ const Portfolio: React.FC = () => {
     { id: 'all', name: 'Tous les projets', count: portfolioItems.length },
     { id: 'cuisine', name: 'Cuisine', count: portfolioItems.filter(item => item.category === 'cuisine').length },
     { id: 'rangement', name: 'Rangements', count: portfolioItems.filter(item => item.category === 'rangement').length },
-    { id: 'dressing', name: 'Dressing', count: portfolioItems.filter(item => item.category === 'dressing').length },
-    { id: 'enfants', name: 'Chambre enfants', count: portfolioItems.filter(item => item.category === 'enfants').length }
+    { id: 'enfants', name: 'Chambre des enfants', count: portfolioItems.filter(item => item.category === 'enfants').length }
   ];
 
   const filteredItems = selectedCategory === 'all' 

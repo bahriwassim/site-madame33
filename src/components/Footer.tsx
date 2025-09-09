@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
         <div className="footer__content">
           <div className="footer__section">
             <div className="footer__brand">
-              <h3>mircea.organise</h3>
+              <img src="/footer-logo.png" alt="Mircea Organise" className="footer__logo" />
               <p>Organisation & rangement pour une maison claire, apaisée et fonctionnelle.</p>
               <div className="footer__values">
                 <span>Amour</span>
@@ -50,12 +50,14 @@ const Footer: React.FC = () => {
               <a href="tel:+352691210680" className="footer__contact-item">
                 +352 691 210 680
               </a>
+              <a href="tel:+33780932106" className="footer__contact-item">
+               +337 80 93 21 06
+              </a>
               <div className="footer__zones">
                 <p><strong>Zones d'intervention :</strong></p>
                 <ul>
                   <li>Paris et région parisienne</li>
-                  <li>Clouange</li>
-                  <li>Luxembourg</li>
+                                   <li>Luxembourg</li>
                   <li>En ligne (monde entier)</li>
                 </ul>
               </div>
@@ -108,7 +110,7 @@ const Footer: React.FC = () => {
 
         <div className="footer__copyright">
           <p>&copy; {currentYear} mircea.organise. Tous droits réservés.</p>
-          <p className="footer__made-with">Fait avec amour pour votre bien-être à la maison</p>
+          <p className="footer__made-with">Ranger, c’est créer de l’espace pour vivre.</p>
         </div>
       </div>
     </footer>

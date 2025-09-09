@@ -20,7 +20,7 @@ const ServicesSection: React.FC = () => {
     {
       icon: <FaIcons.FaChild />,
       title: 'Chambre Enfants',
-      description: 'Création d\'espaces ludiques et organisés pour favoriser l\'autonomie et le bien-être de vos enfants.',
+      description: 'Création d’espaces ludiques et organisés pour favoriser l’autonomie et le quotidien de vos enfants.',
       features: ['Rangement jouets', 'Zone devoirs', 'Organisation vêtements']
     },
     {
@@ -34,21 +34,26 @@ const ServicesSection: React.FC = () => {
   const prestations = [
     {
       type: 'À domicile',
-      zones: 'Paris • Luxembourg • Clouange',
+      zones: 'Paris • Luxembourg ',
       tarifs: [
-        { duree: '3h', prix: '120-180€' },
-        { duree: '6h', prix: '250-350€' },
-        { duree: '3 jours', prix: '700-900€' }
-      ]
+        { duree: 'Pack Découverte ', prix: '3h' },
+        { duree: 'Pack Sérénité ', prix: '1 journée' },
+        { duree: 'Pack Transformation', prix: 'plusieurs jours' }
+      ],
+      
+      description: "👉 Chaque maison est unique : contactez-moi pour un devis personnalisé.",
     },
     {
       type: 'En ligne',
       zones: 'Visioconférence • Coaching personnalisé',
       tarifs: [
-        { duree: '1h', prix: '50-70€' },
-        { duree: '3h', prix: '130-180€' },
-        { duree: 'Suivi 1 mois', prix: '200-250€' }
-      ]
+        { duree: 'Séance conseil', prix: '1h' },
+        { duree: 'Accompagnement pratique', prix: '3h' },
+        { duree: 'Suivi continu', prix: '1 mois' }
+    
+      ],
+       description: "👉 Un devis adapté à vos objectifs vous sera proposé après notre premier échange.",
+
     }
   ];
 
@@ -90,6 +95,7 @@ const ServicesSection: React.FC = () => {
                     </div>
                   ))}
                 </div>
+                <p className="prestation-card__description">{prestation.description}</p>
                 <Link to="/contact" className="btn btn-secondary">
                   Demander un devis
                 </Link>

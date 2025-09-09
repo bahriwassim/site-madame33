@@ -24,7 +24,7 @@ const Header: React.FC = () => {
       <div className="container">
         <div className="header__content">
           <Link to="/" className="header__logo">
-            <h1>mircea.organise</h1>
+            <img src="/logo.png" alt="Mircea Organise" className="header__logo-img" />
           </Link>
           
           <nav className={`header__nav ${isMenuOpen ? 'header__nav--open' : ''}`}>

@@ -18,11 +18,11 @@
   color: var(--light-wood);
 }
 
-.footer__brand h3 {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
+.footer__logo {
+  height: 90px;
+  width: auto;
   margin-bottom: 15px;
-  color: var(--light-wood);
+  filter: brightness(0) invert(1);
 }
 
 .footer__brand p {

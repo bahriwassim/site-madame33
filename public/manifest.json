@@ -1,0 +1,21 @@
+{
+  "name": "Mircea Organise",
+  "short_name": "Mircea Organise",
+  "description": "Organisation & rangement maison pour une vie plus apaisée",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#5C4033",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

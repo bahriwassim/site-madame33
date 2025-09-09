@@ -103,20 +103,7 @@ const Testimonials: React.FC = () => {
           </div>
         </div>
 
-        <div className="testimonials-stats">
-          <div className="testimonials-stat">
-            <span className="testimonials-stat__number">150+</span>
-            <span className="testimonials-stat__label">Clients satisfaits</span>
-          </div>
-          <div className="testimonials-stat">
-            <span className="testimonials-stat__number">98%</span>
-            <span className="testimonials-stat__label">Taux de satisfaction</span>
-          </div>
-          <div className="testimonials-stat">
-            <span className="testimonials-stat__number">5<FaIcons.FaStar style={{marginLeft: '4px'}} /></span>
-            <span className="testimonials-stat__label">Note moyenne</span>
-          </div>
-        </div>
+      
       </div>
     </section>
   );

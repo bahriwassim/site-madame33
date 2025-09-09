@@ -8,18 +8,18 @@ const Hero: React.FC = () => {
   const slides = [
     {
       image: '/publicimages/IMG_5681.JPG',
-      title: 'Transformez votre maison en havre de paix',
-      subtitle: 'Organisation & rangement personnalisé pour une vie plus sereine'
+      title: 'Ranger, c’est libérer de l’espace pour vivre ',
+      subtitle: 'Redonner souffle et clarté à votre intérieur'
     },
     {
       image: '/publicimages/IMG_5682.JPG',
-      title: 'Des solutions sur mesure',
-      subtitle: 'Accompagnement professionnel à domicile et en ligne'
+      title: 'Votre maison mérite d’être un lien de paix',
+      subtitle: 'Organisation personnalisée, pensée pour vous et votre famille'
     },
     {
       image: '/publicimages/IMG_5683.JPG',
-      title: 'Une maison organisée, une vie apaisée',
-      subtitle: 'Créons ensemble votre espace de bien-être'
+      title: 'Chaque objet retrouve sa place ',
+      subtitle: 'Des solutions pratiques et durables, adaptés à votre quotidien.'
     }
   ];
 

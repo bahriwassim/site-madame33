@@ -11,42 +11,42 @@ const CTA: React.FC = () => {
           <div className="cta__text">
             <h2 className="cta__title">Prêt à transformer votre maison ?</h2>
             <p className="cta__subtitle">
-              Contactez-moi dès aujourd'hui pour un devis personnalisé et gratuit. 
-              Ensemble, créons l'espace organisé dont vous rêvez.
+            Contactez-moi pour un devis gratuit et personnalisé.
+Ensemble, créons un intérieur qui vous ressemble et qui respire la paix au quotidien.
+
             </p>
             
             <div className="cta__features">
               <div className="cta__feature">
                 <div className="cta__feature-icon"><FaPhone /></div>
                 <div className="cta__feature-text">
-                  <h4>Consultation gratuite</h4>
-                  <p>Premier échange de 15min offert</p>
+                  <h4>Réactivité garantie</h4>
+                  <p>Organisation d’un rendez-vous selon disponibilités
+                  </p>
                 </div>
               </div>
               
               <div className="cta__feature">
                 <div className="cta__feature-icon"><FaHome /></div>
                 <div className="cta__feature-text">
-                  <h4>Intervention rapide</h4>
-                  <p>Disponibilité sous 48h</p>
+                  <h4>Accompagnement sur-mesure</h4>
+                  <p> suivi personnalisé inclus
+                  </p>
                 </div>
               </div>
               
-              <div className="cta__feature">
-                <div className="cta__feature-icon"><FaStar /></div>
-                <div className="cta__feature-text">
-                  <h4>Satisfaction garantie</h4>
-                  <p>Suivi personnalisé inclus</p>
-                </div>
               </div>
-            </div>
 
             <div className="cta__buttons">
               <Link to="/contact" className="btn btn-primary cta__btn-primary">
                 Demander un devis gratuit
               </Link>
               <a href="tel:+352691210680" className="btn btn-secondary cta__btn-secondary">
-                <FaPhone /> +352 691 210 680
+                <FaPhone /> Lu +352 691 210 680
+              </a>
+              <a href="tel:+33780932106" className="btn btn-secondary cta__btn-secondary">
+                <FaPhone /> Fr: +337 80 93 21 06
+
               </a>
             </div>
           </div>

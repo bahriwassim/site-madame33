@@ -11,21 +11,19 @@ const AboutSection: React.FC = () => {
           <div className="about-section__text">
             <h2 className="section-title">Qui est Mircea ?</h2>
             <p className="section-subtitle">
-              Passionnée par l'organisation et le bien-être à la maison, 
-              je vous accompagne pour créer des espaces qui vous ressemblent.
+              Passionnée par l’organisation et convaincue qu’une maison bien pensée change la vie,
+              je vous aide à créer des espaces clairs, pratiques et chaleureux. 
             </p>
             
             <div className="about-section__description">
               <p>
-                Fort de plusieurs années d'expérience en organisation domestique, 
-                mircea.organise vous propose des solutions personnalisées pour 
-                transformer votre intérieur en un véritable havre de paix.
+                Avec Mircea Organise, je propose des solutions personnalisées pour transformer votre intérieur en un véritable havre de paix, adapté à votre quotidien et à votre famille. 
+
               </p>
               
               <p>
-                Mon approche bienveillante et respectueuse vous permet de reprendre 
-                le contrôle de votre espace de vie, tout en préservant l'harmonie 
-                familiale et votre intimité.
+           Mon approche est simple : efficacité, respect et bienveillance. Mon objectif est de vous permettre de reprendre le contrôle de votre espace de vie, tout en préservant l’harmonie familiale et votre intimité. 
+
               </p>
 
               <div className="about-section__expertise">

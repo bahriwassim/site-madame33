@@ -154,6 +154,14 @@
   font-family: var(--font-serif);
 }
 
+.prestation-card__description {
+  color: var(--text-light);
+  margin-bottom: 25px;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .services-cta {
   text-align: center;
 }
