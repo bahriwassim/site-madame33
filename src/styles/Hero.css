@@ -161,7 +161,8 @@
 
 .hero__value p {
   font-size: 0.9rem;
-  color: var(--text-light);
+  color: var(--chocolate-brown);
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {

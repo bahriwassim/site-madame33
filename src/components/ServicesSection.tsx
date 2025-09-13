@@ -36,23 +36,23 @@ const ServicesSection: React.FC = () => {
       type: 'À domicile',
       zones: 'Paris • Luxembourg ',
       tarifs: [
-        { duree: 'Pack Découverte ', prix: '3h' },
-        { duree: 'Pack Sérénité ', prix: '1 journée' },
-        { duree: 'Pack Transformation', prix: 'plusieurs jours' }
+        { duree: 'Pack Découverte ', prix: '' },
+        { duree: 'Pack Sérénité ', prix: '' },
+        { duree: 'Pack Transformation', prix: '' }
       ],
       
-      description: "👉 Chaque maison est unique : contactez-moi pour un devis personnalisé.",
+      description: " Chaque maison est unique : contactez-moi pour un devis personnalisé.",
     },
     {
       type: 'En ligne',
       zones: 'Visioconférence • Coaching personnalisé',
       tarifs: [
-        { duree: 'Séance conseil', prix: '1h' },
-        { duree: 'Accompagnement pratique', prix: '3h' },
-        { duree: 'Suivi continu', prix: '1 mois' }
+        { duree: 'Séance conseil', prix: '' },
+        { duree: 'Accompagnement pratique', prix: '' },
+        { duree: 'Suivi continu', prix: ' ' }
     
       ],
-       description: "👉 Un devis adapté à vos objectifs vous sera proposé après notre premier échange.",
+       description: " Un devis adapté à vos objectifs vous sera proposé après notre premier échange.",
 
     }
   ];
@@ -105,7 +105,7 @@ const ServicesSection: React.FC = () => {
         </div>
 
         <div className="services-cta">
-          <Link to="/services" className="btn btn-primary">
+          <Link to="/services" className="btn btn-secondary">
             Voir tous nos services
           </Link>
         </div>

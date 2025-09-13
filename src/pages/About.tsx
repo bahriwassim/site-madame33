@@ -16,7 +16,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="about-hero__image">
-              <img src="/publicimages/IMG_5684.JPG" alt="Mircea" />
+              <img src="/publicimages/qui.jpg" alt="Mircea" />
             </div>
           </div>
         </div>
@@ -28,15 +28,10 @@ const About: React.FC = () => {
             <h2 className="section-title">Mon histoire</h2>
             <div className="about-story__text">
               <p>
-                Tout a commencé par un constat simple : une maison désorganisée 
-                peut créer du stress et nuire au bien-être familial. Fort de cette 
-                observation, j'ai décidé de me spécialiser dans l'organisation 
-                domestique pour aider les familles à retrouver sérénité et harmonie.
+              Tout a commencé par un besoin personnel : mettre de l’ordre autour de moi pour retrouver calme et sérénité. Très vite, j’ai compris que l’organisation n’était pas seulement une question de rangement, mais une façon de mieux vivre au quotidien.
               </p>
               <p>
-                Après plusieurs années d'expérience et plus de 150 maisons organisées, 
-                je continue d'accompagner mes clients avec la même passion et la même 
-                bienveillance qui m'animent depuis le début.
+              Forte de mon expérience personnelle et de mon parcours d’éducatrice, j’ai choisi d’accompagner les familles pour créer des intérieurs clairs, pratiques et apaisants. Aujourd’hui, je continue cette mission avec la même passion et la même bienveillance qui m’animent depuis le début.
               </p>
             </div>
           </div>
@@ -93,16 +88,17 @@ const About: React.FC = () => {
           <div className="expertise-content">
             <div className="expertise-stats">
               <div className="stat">
-                <span className="stat__number">150+</span>
-                <span className="stat__label">Maisons organisées</span>
+                <span className="stat__number"></span>
+                <span className="stat__label">Des solutions sur mesure</span>
               </div>
               <div className="stat">
-                <span className="stat__number">98%</span>
-                <span className="stat__label">Taux de satisfaction</span>
+                <span className="stat__number"></span>
+                <span className="stat__label">Une approche durable
+                </span>
               </div>
               <div className="stat">
-                <span className="stat__number">5</span>
-                <span className="stat__label">Années d'expérience</span>
+                <span className="stat__number"></span>
+                <span className="stat__label">Un suivi personnalisé                </span>
               </div>
             </div>
             

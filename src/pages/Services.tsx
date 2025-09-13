@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import * as FaIcons from 'react-icons/fa';
+import WhatsAppButton from '../components/WhatsAppButton';
 import '../styles/Services.css';
 
 const Services: React.FC = () => {
@@ -18,8 +19,7 @@ const Services: React.FC = () => {
         'Conseils en aménagement'
       ],
       image: '/publicimages/IMG_5681.JPG',
-      duration: '3-6h',
-      price: '120-350€'
+      duration: '3-6h'
     },
     {
       id: 2,
@@ -34,8 +34,7 @@ const Services: React.FC = () => {
         'Solutions sur mesure'
       ],
       image: '/publicimages/IMG_5682.JPG',
-      duration: '4-8h',
-      price: '160-450€'
+      duration: '4-8h'
     },
     {
       id: 3,
@@ -50,8 +49,7 @@ const Services: React.FC = () => {
         'Formation à l\'autonomie'
       ],
       image: '/publicimages/IMG_5683.JPG',
-      duration: '2-4h',
-      price: '80-200€'
+      duration: '2-4h'
     },
     {
       id: 4,
@@ -66,8 +64,7 @@ const Services: React.FC = () => {
         'Solutions gain de place'
       ],
       image: '/publicimages/IMG_5684.JPG',
-      duration: '2-3h',
-      price: '80-180€'
+      duration: '2-3h'
     }
   ];
 
@@ -77,9 +74,9 @@ const Services: React.FC = () => {
       subtitle: 'Intervention directe chez vous',
       zones: ['Paris et région parisienne', 'Luxembourg', 'Clouange'],
       tarifs: [
-        { service: 'Prestation 3h', prix: '120-180€', description: 'Idéal pour un espace spécifique' },
-        { service: 'Journée complète (6h)', prix: '250-350€', description: 'Pour plusieurs espaces' },
-        { service: 'Pack 3 jours', prix: '700-900€', description: 'Organisation complète maison' }
+        { service: 'Prestation 3h', description: 'Idéal pour un espace spécifique' },
+        { service: 'Journée complète (6h)', description: 'Pour plusieurs espaces' },
+        { service: 'Pack 3 jours', description: 'Organisation complète maison' }
       ],
       advantages: [
         'Intervention sur site',
@@ -93,9 +90,9 @@ const Services: React.FC = () => {
       subtitle: 'Accompagnement à distance via visioconférence',
       zones: ['Disponible partout dans le monde'],
       tarifs: [
-        { service: 'Séance 1h', prix: '50-70€', description: 'Conseils ciblés' },
-        { service: 'Pack 3h', prix: '130-180€', description: 'Projet complet' },
-        { service: 'Suivi 1 mois', prix: '200-250€', description: '4 séances + support WhatsApp' }
+        { service: 'Séance 1h', description: 'Conseils ciblés' },
+        { service: 'Pack 3h', description: 'Projet complet' },
+        { service: 'Suivi 1 mois', description: '4 séances + support WhatsApp' }
       ],
       advantages: [
         'Flexibilité horaire',
@@ -142,10 +139,6 @@ const Services: React.FC = () => {
                     <span className="service-info__label">Durée :</span>
                     <span className="service-info__value">{service.duration}</span>
                   </div>
-                  <div className="service-info">
-                    <span className="service-info__label">Tarif :</span>
-                    <span className="service-info__value">{service.price}</span>
-                  </div>
                 </div>
               </div>
 
@@ -183,7 +176,6 @@ const Services: React.FC = () => {
                     <div key={i} className="tarif-detailed">
                       <div className="tarif-detailed__main">
                         <span className="tarif-detailed__service">{tarif.service}</span>
-                        <span className="tarif-detailed__prix">{tarif.prix}</span>
                       </div>
                       <p className="tarif-detailed__description">{tarif.description}</p>
                     </div>
@@ -220,9 +212,14 @@ const Services: React.FC = () => {
               <Link to="/contact" className="btn btn-primary">
                 Demander un devis gratuit
               </Link>
-              <a href="tel:+352691210680" className="btn btn-secondary">
-                <FaIcons.FaPhone style={{marginRight: '8px'}} /> +352 691 210 680
-              </a>
+              <WhatsAppButton 
+                phoneNumber="+352691210680" 
+                message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
+                variant="secondary"
+                size="medium"
+              >
+                +352 691 210 680
+              </WhatsAppButton>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
+import WhatsAppButton from '../components/WhatsAppButton';
 import '../styles/FAQ.css';
 
 const FAQ: React.FC = () => {
@@ -60,12 +61,12 @@ const FAQ: React.FC = () => {
       ]
     },
     {
-      title: 'Tarifs & Modalités',
+      title: 'Modalités',
       items: [
         {
           id: 8,
-          question: 'Comment sont calculés vos tarifs ?',
-          answer: 'Mes tarifs dépendent de la durée d\'intervention et de la complexité du projet. À domicile : 40-60€/heure selon la zone. En ligne : 50-70€ la séance. Je propose aussi des forfaits pour les projets plus importants. Devis gratuit et personnalisé.'
+          question: 'Comment fonctionne le devis ?',
+          answer: 'Chaque projet est unique et nécessite une évaluation personnalisée. Je propose un devis gratuit et détaillé après notre premier échange pour comprendre vos besoins spécifiques.'
         },
         {
           id: 9,
@@ -75,7 +76,7 @@ const FAQ: React.FC = () => {
         {
           id: 10,
           question: 'Y a-t-il des frais de déplacement ?',
-          answer: 'Les déplacements sont inclus dans mes tarifs pour Paris intramuros, Luxembourg ville et Clouange. Pour les zones plus éloignées, des frais de déplacement peuvent s\'appliquer (calculés au réel). Je vous informe toujours à l\'avance.'
+          answer: 'Les déplacements sont inclus pour Paris intramuros, Luxembourg ville et Clouange. Pour les zones plus éloignées, des frais de déplacement peuvent s\'appliquer (calculés au réel). Je vous informe toujours à l\'avance.'
         }
       ]
     },
@@ -143,9 +144,14 @@ const FAQ: React.FC = () => {
                 directement pour un échange personnalisé.
               </p>
               <div className="faq-intro__contact">
-                <a href="tel:+352691210680" className="btn btn-primary">
-                  <FaIcons.FaPhone style={{marginRight: '8px'}} /> +352 691 210 680
-                </a>
+                <WhatsAppButton 
+                  phoneNumber="+352691210680" 
+                  message="Bonjour, j'ai une question concernant vos services d'organisation."
+                  variant="primary"
+                  size="medium"
+                >
+                  +352 691 210 680
+                </WhatsAppButton>
                 <a href="/contact" className="btn btn-secondary">
                   Poser une question
                 </a>
@@ -196,9 +202,14 @@ const FAQ: React.FC = () => {
                 <a href="/contact" className="btn btn-primary">
                   Me contacter
                 </a>
-                <a href="tel:+352691210680" className="btn btn-secondary">
-                  Appeler maintenant
-                </a>
+                <WhatsAppButton 
+                  phoneNumber="+352691210680" 
+                  message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
+                  variant="secondary"
+                  size="medium"
+                >
+                  Contacter par WhatsApp
+                </WhatsAppButton>
               </div>
             </div>
           </div>

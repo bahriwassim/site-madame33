@@ -46,14 +46,11 @@ const AboutSection: React.FC = () => {
           <div className="about-section__image">
             <div className="about-section__image-container">
               <img 
-                src="/publicimages/IMG_5684.JPG" 
+                src="/publicimages/qui.JPG" 
                 alt="Organisation professionnelle" 
                 className="about-section__img"
               />
-              <div className="about-section__badge">
-                <span>+150</span>
-                <small>Maisons organisées</small>
-              </div>
+            
             </div>
           </div>
         </div>

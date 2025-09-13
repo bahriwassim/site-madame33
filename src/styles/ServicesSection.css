@@ -94,15 +94,26 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px;
+  justify-items: center;
 }
 
 .prestation-card {
   background: linear-gradient(135deg, var(--soft-gray) 0%, var(--white) 100%);
   padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   text-align: center;
   position: relative;
+  max-width: 500px;
+  width: 100%;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.prestation-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  border-color: var(--light-wood);
 }
 
 .prestation-card::before {
@@ -165,6 +176,7 @@
 .services-cta {
   text-align: center;
 }
+
 
 @media (max-width: 968px) {
   .services-grid {

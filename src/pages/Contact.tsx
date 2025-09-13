@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import * as FaIcons from 'react-icons/fa';
+import WhatsAppButton from '../components/WhatsAppButton';
 import '../styles/Contact.css';
 
 interface FormData {
@@ -101,11 +102,16 @@ const Contact: React.FC = () => {
               </div>
 
               <div className="contact-info__section">
-                <h3><FaIcons.FaPhone style={{marginRight: '8px'}} /> Contact direct</h3>
+                <h3><FaIcons.FaWhatsapp style={{marginRight: '8px'}} /> Contact direct</h3>
                 <div className="contact-direct">
-                  <a href="tel:+352691210680" className="contact-direct__phone">
+                  <WhatsAppButton 
+                    phoneNumber="+352691210680" 
+                    message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
+                    variant="primary"
+                    size="large"
+                  >
                     +352 691 210 680
-                  </a>
+                  </WhatsAppButton>
                   <p>Disponible du lundi au samedi, 9h-18h</p>
                   <small>Première consultation de 15min offerte</small>
                 </div>
@@ -288,9 +294,14 @@ const Contact: React.FC = () => {
               Pour les demandes urgentes ou si vous préférez un contact direct, 
               n'hésitez pas à m'appeler. Je suis à votre écoute !
             </p>
-            <a href="tel:+352691210680" className="btn btn-secondary btn-large">
-              <FaIcons.FaPhone style={{marginRight: '8px'}} /> Appeler maintenant : +352 691 210 680
-            </a>
+            <WhatsAppButton 
+              phoneNumber="+352691210680" 
+              message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
+              variant="secondary"
+              size="large"
+            >
+              Contacter par WhatsApp : +352 691 210 680
+            </WhatsAppButton>
           </div>
         </div>
       </section>

@@ -113,67 +113,30 @@
   border-color: var(--light-wood);
 }
 
-.portfolio-card__images {
-  position: relative;
+/* Styles pour le nouveau composant BeforeAfterSlider dans les cartes */
+.portfolio-card .before-after-slider {
+  height: 100%;
+  min-height: 300px;
+}
+
+.portfolio-card .before-after-slider__container {
   height: 250px;
-  overflow: hidden;
 }
 
-.portfolio-card__before,
-.portfolio-card__after {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
+.portfolio-card .before-after-slider__content {
+  background: linear-gradient(135deg, var(--white) 0%, var(--soft-gray) 100%);
+  border-radius: 0 0 20px 20px;
+  padding: 20px;
 }
 
-.portfolio-card__before {
-  left: 0;
+.portfolio-card .before-after-slider__title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
 }
 
-.portfolio-card__after {
-  right: 0;
-}
-
-.portfolio-card__before img,
-.portfolio-card__after img {
-  width: 200%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.portfolio-card__before img {
-  object-position: left center;
-}
-
-.portfolio-card__after img {
-  object-position: right center;
-  transform: translateX(-50%);
-}
-
-.portfolio-card:hover img {
-  transform: scale(1.05);
-}
-
-.portfolio-card:hover .portfolio-card__after img {
-  transform: translateX(-50%) scale(1.05);
-}
-
-.portfolio-card__label {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--white);
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.portfolio-card .before-after-slider__description {
+  font-size: 0.9rem;
+  margin-bottom: 0;
 }
 
 .portfolio-card__content {
@@ -288,38 +251,23 @@
   flex-wrap: wrap;
 }
 
-.portfolio-modal__images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.portfolio-modal__slider-container {
   padding: 20px 40px;
 }
 
-.portfolio-modal__image {
-  position: relative;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.portfolio-modal__slider-container .before-after-slider {
+  max-height: 60vh;
+  min-height: 400px;
 }
 
-.portfolio-modal__image img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.portfolio-modal__slider-container .before-after-slider__container {
+  height: 50vh;
+  min-height: 400px;
 }
 
-.portfolio-modal__image-label {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.8);
-  color: var(--white);
-  padding: 5px 15px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 500;
-  text-transform: uppercase;
+.portfolio-modal__slider-container .before-after-slider__content {
+  background: linear-gradient(135deg, var(--white) 0%, var(--soft-gray) 100%);
+  border-radius: 0 0 20px 20px;
 }
 
 .portfolio-modal__details {

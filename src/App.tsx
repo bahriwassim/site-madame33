@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import FloatingParticles from './components/FloatingParticles';
+import WhatsAppButton from './components/WhatsAppButton';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -25,6 +27,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <FloatingParticles />
         <ScrollToTop />
         <Header />
         <main>
@@ -40,6 +43,14 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        
+        {/* Bouton WhatsApp flottant */}
+        <WhatsAppButton 
+          phoneNumber="+352691210680" 
+          message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
+          variant="floating"
+          size="medium"
+        />
       </div>
     </Router>
   );

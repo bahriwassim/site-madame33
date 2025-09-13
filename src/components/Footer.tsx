@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import WhatsAppButton from './WhatsAppButton';
 import '../styles/Footer.css';
 
 const Footer: React.FC = () => {
@@ -47,12 +48,15 @@ const Footer: React.FC = () => {
           <div className="footer__section">
             <h4>Contact</h4>
             <div className="footer__contact">
-              <a href="tel:+352691210680" className="footer__contact-item">
+              <WhatsAppButton 
+                phoneNumber="+352691210680" 
+                message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
+                variant="outline"
+                size="small"
+                className="footer__contact-item"
+              >
                 +352 691 210 680
-              </a>
-              <a href="tel:+33780932106" className="footer__contact-item">
-               +337 80 93 21 06
-              </a>
+              </WhatsAppButton>
               <div className="footer__zones">
                 <p><strong>Zones d'intervention :</strong></p>
                 <ul>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import * as FaIcons from 'react-icons/fa';
+import BeforeAfterSlider from '../components/BeforeAfterSlider';
 import '../styles/Portfolio.css';
 
 const Portfolio: React.FC = () => {
@@ -164,6 +166,28 @@ const Portfolio: React.FC = () => {
 
   const selectedPortfolioItem = portfolioItems.find(item => item.id === selectedItem);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
     <div className="portfolio-page">
       <section className="portfolio-hero section">
@@ -173,22 +197,7 @@ const Portfolio: React.FC = () => {
             Découvrez nos réalisations et les transformations réussies
           </p>
           <div className="portfolio-stats">
-            <div className="portfolio-stat">
-              <span className="portfolio-stat__number">150+</span>
-              <span className="portfolio-stat__label">Projets réalisés</span>
-            </div>
-            <div className="portfolio-stat">
-              <span className="portfolio-stat__number">98%</span>
-              <span className="portfolio-stat__label">Clients satisfaits</span>
-            </div>
-            <div className="portfolio-stat">
-              <span className="portfolio-stat__number">7/7</span>
-              <span className="portfolio-stat__label">Disponible</span>
-            </div>
-            <div className="portfolio-stat">
-              <span className="portfolio-stat__number">3</span>
-              <span className="portfolio-stat__label">Pays d'intervention</span>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -207,96 +216,158 @@ const Portfolio: React.FC = () => {
             ))}
           </div>
 
-          <div className="portfolio-grid">
+          <motion.div 
+            className="portfolio-grid"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
             {filteredItems.map(item => (
-              <div key={item.id} className="portfolio-card">
-                <div className="portfolio-card__images">
-                  <div className="portfolio-card__before">
-                    <img src={item.beforeImage} alt={`${item.title} - Avant`} />
-                    <div className="portfolio-card__label">Avant</div>
-                  </div>
-                  <div className="portfolio-card__after">
-                    <img src={item.afterImage} alt={`${item.title} - Après`} />
-                    <div className="portfolio-card__label">Après</div>
-                  </div>
-                </div>
+              <motion.div 
+                key={item.id} 
+                className="portfolio-card"
+                variants={cardVariants}
+                whileHover={{ y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <BeforeAfterSlider
+                  beforeImage={item.beforeImage}
+                  afterImage={item.afterImage}
+                  beforeLabel="Avant"
+                  afterLabel="Après"
+                  title={item.title}
+                  description={item.description}
+                />
                 
                 <div className="portfolio-card__content">
                   <div className="portfolio-card__header">
-                    <h3 className="portfolio-card__title">{item.title}</h3>
                     <div className="portfolio-card__meta">
                       <span className="portfolio-card__location"><FaIcons.FaMapMarkerAlt style={{marginRight: '4px'}} /> {item.location}</span>
                       <span className="portfolio-card__duration">⏱️ {item.duration}</span>
                     </div>
                   </div>
                   
-                  <p className="portfolio-card__description">{item.description}</p>
-                  
-                  <button 
+                  <motion.button 
                     className="portfolio-card__cta"
                     onClick={() => openModal(item.id)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ duration: 0.2 }}
                   >
                     Voir le détail du projet →
-                  </button>
+                  </motion.button>
                 </div>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      {selectedPortfolioItem && (
-        <div className="portfolio-modal" onClick={closeModal}>
-          <div className="portfolio-modal__content" onClick={e => e.stopPropagation()}>
-            <button className="portfolio-modal__close" onClick={closeModal}>×</button>
-            
-            <div className="portfolio-modal__header">
-              <h2>{selectedPortfolioItem.title}</h2>
-              <div className="portfolio-modal__meta">
-                <span><FaIcons.FaMapMarkerAlt style={{marginRight: '4px'}} /> {selectedPortfolioItem.location}</span>
-                <span>⏱️ {selectedPortfolioItem.duration}</span>
-                <span><FaIcons.FaUsers style={{marginRight: '4px'}} /> {selectedPortfolioItem.client}</span>
-              </div>
-            </div>
-
-            <div className="portfolio-modal__images">
-              <div className="portfolio-modal__image">
-                <img src={selectedPortfolioItem.beforeImage} alt="Avant" />
-                <div className="portfolio-modal__image-label">Avant</div>
-              </div>
-              <div className="portfolio-modal__image">
-                <img src={selectedPortfolioItem.afterImage} alt="Après" />
-                <div className="portfolio-modal__image-label">Après</div>
-              </div>
-            </div>
-
-            <div className="portfolio-modal__details">
-              <div className="portfolio-modal__section">
-                <h3>Description du projet</h3>
-                <p>{selectedPortfolioItem.description}</p>
-              </div>
-
-              <div className="portfolio-modal__section">
-                <h3>Défis rencontrés</h3>
-                <ul>
-                  {selectedPortfolioItem.challenges.map((challenge, i) => (
-                    <li key={i}>{challenge}</li>
-                  ))}
-                </ul>
+      <AnimatePresence>
+        {selectedPortfolioItem && (
+          <motion.div 
+            className="portfolio-modal" 
+            onClick={closeModal}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <motion.div 
+              className="portfolio-modal__content" 
+              onClick={e => e.stopPropagation()}
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <motion.button 
+                className="portfolio-modal__close" 
+                onClick={closeModal}
+                whileHover={{ scale: 1.1, rotate: 90 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.2 }}
+              >
+                ×
+              </motion.button>
+              
+              <div className="portfolio-modal__header">
+                <h2>{selectedPortfolioItem.title}</h2>
+                <div className="portfolio-modal__meta">
+                  <span><FaIcons.FaMapMarkerAlt style={{marginRight: '4px'}} /> {selectedPortfolioItem.location}</span>
+                  <span>⏱️ {selectedPortfolioItem.duration}</span>
+                  <span><FaIcons.FaUsers style={{marginRight: '4px'}} /> {selectedPortfolioItem.client}</span>
+                </div>
               </div>
 
-              <div className="portfolio-modal__section">
-                <h3>Solutions apportées</h3>
-                <ul>
-                  {selectedPortfolioItem.solutions.map((solution, i) => (
-                    <li key={i}><FaIcons.FaCheck style={{marginRight: '8px'}} /> {solution}</li>
-                  ))}
-                </ul>
+              <div className="portfolio-modal__slider-container">
+                <BeforeAfterSlider
+                  beforeImage={selectedPortfolioItem.beforeImage}
+                  afterImage={selectedPortfolioItem.afterImage}
+                  beforeLabel="Avant"
+                  afterLabel="Après"
+                  isModal={true}
+                />
               </div>
-            </div>
-          </div>
-        </div>
-      )}
+
+              <div className="portfolio-modal__details">
+                <motion.div 
+                  className="portfolio-modal__section"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                >
+                  <h3>Description du projet</h3>
+                  <p>{selectedPortfolioItem.description}</p>
+                </motion.div>
+
+                <motion.div 
+                  className="portfolio-modal__section"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
+                >
+                  <h3>Défis rencontrés</h3>
+                  <ul>
+                    {selectedPortfolioItem.challenges.map((challenge, i) => (
+                      <motion.li 
+                        key={i}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: 0.4 + i * 0.1 }}
+                      >
+                        {challenge}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+
+                <motion.div 
+                  className="portfolio-modal__section"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 }}
+                >
+                  <h3>Solutions apportées</h3>
+                  <ul>
+                    {selectedPortfolioItem.solutions.map((solution, i) => (
+                      <motion.li 
+                        key={i}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: 0.5 + i * 0.1 }}
+                      >
+                        <FaIcons.FaCheck style={{marginRight: '8px', color: 'var(--chocolate-brown)'}} /> {solution}
+                      </motion.li>
+                    ))}
+                  </ul>
+                </motion.div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

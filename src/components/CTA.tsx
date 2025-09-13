@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaPhone, FaHome, FaStar, FaBullseye } from 'react-icons/fa';
+import { FaHome, FaStar, FaBullseye } from 'react-icons/fa';
+import WhatsAppButton from './WhatsAppButton';
 import '../styles/CTA.css';
 
 const CTA: React.FC = () => {
@@ -18,7 +19,7 @@ Ensemble, créons un intérieur qui vous ressemble et qui respire la paix au quo
             
             <div className="cta__features">
               <div className="cta__feature">
-                <div className="cta__feature-icon"><FaPhone /></div>
+                <div className="cta__feature-icon"><FaHome /></div>
                 <div className="cta__feature-text">
                   <h4>Réactivité garantie</h4>
                   <p>Organisation d’un rendez-vous selon disponibilités
@@ -41,13 +42,15 @@ Ensemble, créons un intérieur qui vous ressemble et qui respire la paix au quo
               <Link to="/contact" className="btn btn-primary cta__btn-primary">
                 Demander un devis gratuit
               </Link>
-              <a href="tel:+352691210680" className="btn btn-secondary cta__btn-secondary">
-                <FaPhone /> Lu +352 691 210 680
-              </a>
-              <a href="tel:+33780932106" className="btn btn-secondary cta__btn-secondary">
-                <FaPhone /> Fr: +337 80 93 21 06
-
-              </a>
+              <WhatsAppButton 
+                phoneNumber="+352691210680" 
+                message="Bonjour, je souhaite organiser un rendez-vous pour vos services d'organisation."
+                variant="secondary"
+                size="medium"
+                className="cta__btn-secondary"
+              >
+                +352 691 210 680
+              </WhatsAppButton>
             </div>
           </div>
           
@@ -58,13 +61,7 @@ Ensemble, créons un intérieur qui vous ressemble et qui respire la paix au quo
                 alt="Espace organisé et apaisant" 
                 className="cta__img"
               />
-              <div className="cta__badge">
-                <span><FaBullseye /></span>
-                <div>
-                  <strong>Résultats garantis</strong>
-                  <small>ou remboursé</small>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import * as FaIcons from 'react-icons/fa';
+import WhatsAppButton from '../components/WhatsAppButton';
 import '../styles/Links.css';
 
 const Links: React.FC = () => {
@@ -102,12 +103,12 @@ const Links: React.FC = () => {
     {
       category: 'Contact rapide',
       items: [
-        {
-          title: 'Téléphone',
-          description: 'Appelez-moi directement pour un conseil immédiat',
-          url: 'tel:+352691210680',
-          icon: <FaIcons.FaPhone />
-        },
+    {
+      title: 'WhatsApp',
+      description: 'Contactez-moi directement sur WhatsApp pour un conseil immédiat',
+      url: 'whatsapp:+352691210680',
+      icon: <FaIcons.FaWhatsapp />
+    },
         {
           title: 'Email',
           description: 'Envoyez-moi votre demande par email',
@@ -146,7 +147,7 @@ const Links: React.FC = () => {
           </p>
           <div className="links-hero__info">
             <div className="links-hero__contact">
-              <span><FaIcons.FaPhone style={{marginRight: '4px'}} /> +352 691 210 680</span>
+              <span><FaIcons.FaWhatsapp style={{marginRight: '4px'}} /> +352 691 210 680</span>
               <span><FaIcons.FaEnvelope style={{marginRight: '4px'}} /> contact@mircea-organise.com</span>
             </div>
           </div>
@@ -197,12 +198,14 @@ const Links: React.FC = () => {
               >
                 Demander un devis
               </button>
-              <button 
-                className="btn btn-secondary"
-                onClick={() => handleLinkClick('tel:+352691210680')}
+              <WhatsAppButton 
+                phoneNumber="+352691210680" 
+                message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
+                variant="secondary"
+                size="medium"
               >
-                <FaIcons.FaPhone style={{marginRight: '8px'}} /> Appeler maintenant
-              </button>
+                Contacter par WhatsApp
+              </WhatsAppButton>
             </div>
           </div>
         </div>
