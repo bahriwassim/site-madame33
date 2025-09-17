@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import BeforeAfterSlider from './BeforeAfterSlider';
+import SimpleSlider from './SimpleSlider';
 import '../styles/PortfolioSection.css';
 
 const PortfolioSection: React.FC = () => {
@@ -21,8 +21,40 @@ const PortfolioSection: React.FC = () => {
       category: 'cuisine',
       title: 'Une cuisine transformée',
       beforeImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0052.jpg',
-      afterImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0056.jpg',
+      afterImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0062.jpg',
       description: 'Réorganisation complète pour un espace fonctionnel et agréable à vivre.'
+    },
+    {
+      id: 3,
+      category: 'cuisine',
+      title: 'Fluidité retrouvée',
+      beforeImage: '/publicimages/avant-apres/cuisine 2/20250908_131742000_iOS.png',
+      afterImage: '/publicimages/avant-apres/cuisine 2/IMG-20250908-WA0039.jpg',
+      description: 'Chaque placard optimisé pour cuisiner sans perte de temps.'
+    },
+    {
+      id: 4,
+      category: 'cuisine',
+      title: 'Un coin épices simplifié',
+      beforeImage: '/publicimages/avant-apres/Cuisine épices/IMG-20250905-WA0012.jpg',
+      afterImage: '/publicimages/avant-apres/Cuisine épices/20250908_133850000_iOS.jpg',
+      description: 'Des étagères encombrées à un système clair et accessible au quotidien.'
+    },
+    {
+      id: 5,
+      category: 'rangement',
+      title: 'Des linges bien rangés',
+      beforeImage: '/publicimages/avant-apres/pliages/20250908_133030000_iOS.jpg',
+      afterImage: '/publicimages/avant-apres/pliages/20250908_133153000_iOS.jpg',
+      description: 'Méthodes de pliage optimisées pour gagner de la place et de la clarté.'
+    },
+    {
+      id: 6,
+      category: 'rangement',
+      title: 'Un espace apaisant',
+      beforeImage: '/publicimages/avant-apres/Salle de douche/20250908_133513000_iOS.jpg',
+      afterImage: '/publicimages/avant-apres/Salle de douche/20250908_133638000_iOS.jpg',
+      description: 'Organisation des produits et optimisation des rangements pour plus de confort.'
     }
   ];
 
@@ -33,9 +65,9 @@ const PortfolioSection: React.FC = () => {
     { id: 'enfants', name: 'Chambre des enfants' }
   ];
 
-  const filteredItems = selectedCategory === 'all' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === selectedCategory);
+  const filteredItems = selectedCategory === 'all'
+    ? portfolioItems.slice(0, 2)
+    : portfolioItems.filter(item => item.category === selectedCategory).slice(0, 2);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -110,7 +142,7 @@ const PortfolioSection: React.FC = () => {
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
             >
-              <BeforeAfterSlider
+              <SimpleSlider
                 beforeImage={item.beforeImage}
                 afterImage={item.afterImage}
                 beforeLabel="Avant"

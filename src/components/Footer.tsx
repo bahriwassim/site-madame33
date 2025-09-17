@@ -55,8 +55,7 @@ const Footer: React.FC = () => {
                 size="small"
                 className="footer__contact-item"
               >
-                +352 691 210 680
-              </WhatsAppButton>
+Discutons sur WhatsApp              </WhatsAppButton>
               <div className="footer__zones">
                 <p><strong>Zones d'intervention :</strong></p>
                 <ul>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FaIcons from 'react-icons/fa';
-import BeforeAfterSlider from '../components/BeforeAfterSlider';
+import SimpleSlider from '../components/SimpleSlider';
 import '../styles/Portfolio.css';
 
 const Portfolio: React.FC = () => {
@@ -39,7 +39,7 @@ const Portfolio: React.FC = () => {
       duration: '6h',
       client: 'Famille Martin',
       beforeImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0052.jpg',
-      afterImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0056.jpg',
+      afterImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0062.jpg',
       description: 'Réorganisation complète pour un espace fonctionnel et agréable à vivre.',
       challenges: [
         'Espace réduit à optimiser',
@@ -61,7 +61,7 @@ const Portfolio: React.FC = () => {
       duration: '5h',
       client: 'Couple Rousseau',
       beforeImage: '/publicimages/avant-apres/cuisine 2/20250908_131742000_iOS.png',
-      afterImage: '/publicimages/avant-apres/cuisine 2/IMG-20250908-WA0033.jpg',
+      afterImage: '/publicimages/avant-apres/cuisine 2/IMG-20250908-WA0039.jpg',
       description: 'Chaque placard optimisé pour cuisiner sans perte de temps.',
       challenges: [
         'Deux personnes utilisent la cuisine',
@@ -82,7 +82,7 @@ const Portfolio: React.FC = () => {
       location: 'Clouange',
       duration: '3h',
       client: 'Mme Dubois',
-      beforeImage: '/publicimages/avant-apres/Cuisine épices/20250908_130901000_iOS.jpg',
+      beforeImage: '/publicimages/avant-apres/Cuisine épices/IMG-20250905-WA0012.jpg',
       afterImage: '/publicimages/avant-apres/Cuisine épices/20250908_133850000_iOS.jpg',
       description: 'Des étagères encombrées à un système clair et accessible au quotidien.',
       challenges: [
@@ -105,7 +105,7 @@ const Portfolio: React.FC = () => {
       duration: '4h',
       client: 'Famille Leroy',
       beforeImage: '/publicimages/avant-apres/pliages/20250908_133030000_iOS.jpg',
-      afterImage: '/publicimages/avant-apres/pliages/20250908_133052000_iOS.jpg',
+      afterImage: '/publicimages/avant-apres/pliages/20250908_133153000_iOS.jpg',
       description: 'Méthodes de pliage optimisées pour gagner de la place et de la clarté.',
       challenges: [
         'Linges de maison encombrants',
@@ -231,7 +231,7 @@ const Portfolio: React.FC = () => {
                 whileHover={{ y: -5 }}
                 transition={{ duration: 0.3 }}
               >
-                <BeforeAfterSlider
+                <SimpleSlider
                   beforeImage={item.beforeImage}
                   afterImage={item.afterImage}
                   beforeLabel="Avant"
@@ -302,12 +302,13 @@ const Portfolio: React.FC = () => {
               </div>
 
               <div className="portfolio-modal__slider-container">
-                <BeforeAfterSlider
+                <SimpleSlider
                   beforeImage={selectedPortfolioItem.beforeImage}
                   afterImage={selectedPortfolioItem.afterImage}
                   beforeLabel="Avant"
                   afterLabel="Après"
-                  isModal={true}
+                  title={selectedPortfolioItem.title}
+                  description={selectedPortfolioItem.description}
                 />
               </div>
 

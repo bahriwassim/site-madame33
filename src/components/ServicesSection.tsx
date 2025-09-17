@@ -104,11 +104,6 @@ const ServicesSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="services-cta">
-          <Link to="/services" className="btn btn-secondary">
-            Voir tous nos services
-          </Link>
-        </div>
       </div>
     </section>
   );

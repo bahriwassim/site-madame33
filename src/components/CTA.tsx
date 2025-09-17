@@ -47,9 +47,9 @@ Ensemble, créons un intérieur qui vous ressemble et qui respire la paix au quo
                 message="Bonjour, je souhaite organiser un rendez-vous pour vos services d'organisation."
                 variant="secondary"
                 size="medium"
-                className="cta__btn-secondary"
+                className="cta__btn-primary"
               >
-                +352 691 210 680
+                Contact sur whatsapp 
               </WhatsAppButton>
             </div>
           </div>
