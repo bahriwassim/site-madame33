@@ -16,7 +16,7 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="about-hero__image">
-              <img src="/publicimages/qui.jpg" alt="Mircea" />
+              <img src="/publicimages/qui.JPG" alt="Mircea" />
             </div>
           </div>
         </div>
