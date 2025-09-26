@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import * as FaIcons from 'react-icons/fa';
 import '../styles/ServicesSection.css';
 
@@ -104,8 +105,21 @@ const ServicesSection: React.FC = () => {
             ))}
           </div>
           <br / >
-          <p style={{textAlign: 'center'}} >Chaque prestation, à domicile ou en ligne, inclut un suivi d’un mois pour garantir la bonne mise en place des solutions.
+          <p style={{textAlign: 'center'}} >Chaque prestation, à domicile ou en ligne, inclut un suivi d'un mois pour garantir la bonne mise en place des solutions.
           </p>
+
+          <motion.div
+            className="contact-button-content"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            style={{ textAlign: 'center', marginTop: '30px' }}
+          >
+            <Link to="/contact" className="btn btn-primary contact-button">
+              Nous contacter
+            </Link>
+          </motion.div>
 
         </div>
 

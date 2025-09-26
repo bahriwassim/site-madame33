@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SimpleSlider from './SimpleSlider';
 import '../styles/PortfolioSection.css';
 
 const PortfolioSection: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
 
   const portfolioItems = [
     {
@@ -58,22 +57,11 @@ const PortfolioSection: React.FC = () => {
     }
   ];
 
-  const categories = [
-    { id: 'all', name: 'Tout voir' },
-    { id: 'cuisine', name: 'Cuisine' },
-    { id: 'rangement', name: 'Rangements' },
-    { id: 'enfants', name: 'Chambre des enfants' }
-  ];
-
   // Afficher spécifiquement "Un coin épices simplifié" et "Des linges bien rangés"
   const featuredItems = [
     portfolioItems.find(item => item.title === 'Un coin épices simplifié'),
     portfolioItems.find(item => item.title === 'Des linges bien rangés')
   ].filter((item): item is NonNullable<typeof item> => item !== undefined);
-
-  const filteredItems = selectedCategory === 'all'
-    ? featuredItems
-    : portfolioItems.filter(item => item.category === selectedCategory).slice(0, 2);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -112,26 +100,6 @@ const PortfolioSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <motion.div 
-          className="portfolio-filters"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {categories.map(category => (
-            <motion.button
-              key={category.id}
-              className={`portfolio-filter ${selectedCategory === category.id ? 'portfolio-filter--active' : ''}`}
-              onClick={() => setSelectedCategory(category.id)}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
-              {category.name}
-            </motion.button>
-          ))}
-        </motion.div>
 
         <motion.div 
           className="portfolio-grid"
@@ -140,7 +108,7 @@ const PortfolioSection: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {filteredItems.map((item, index) => (
+          {featuredItems.map((item, index) => (
             <motion.div 
               key={item.id} 
               className="portfolio-item"

@@ -1,0 +1,35 @@
+.contact-button-section {
+  padding: 40px 0;
+  background-color: var(--soft-gray);
+}
+
+.contact-button-content {
+  text-align: center;
+}
+
+.contact-button {
+  font-size: 1.1rem;
+  padding: 18px 40px;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 15px rgba(92, 64, 51, 0.3);
+  transition: all 0.3s ease;
+}
+
+.contact-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(92, 64, 51, 0.4);
+}
+
+@media (max-width: 768px) {
+  .contact-button-section {
+    padding: 30px 0;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+    padding: 15px 30px;
+  }
+}
