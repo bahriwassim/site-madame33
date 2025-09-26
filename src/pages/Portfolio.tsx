@@ -16,8 +16,8 @@ const Portfolio: React.FC = () => {
       location: 'Luxembourg',
       duration: '4h',
       client: 'Famille Schmidt',
-      beforeImage: '/publicimages/avant-apres/Chambre des enfants/20250908_132250000_iOS.jpg',
-      afterImage: '/publicimages/avant-apres/Chambre des enfants/IMG-20250908-WA0040.jpg',
+      beforeImage: '/publicimages/Photos Avant Après/Un espace ludique et organisé/Avant.jpg',
+      afterImage: '/publicimages/Photos Avant Après/Un espace ludique et organisé/Après.jpg',
       description: 'De la pagaille au quotidien à une chambre qui favorise l\'autonomie et la sérénité.',
       challenges: [
         'Enfants de 4 et 7 ans',
@@ -38,8 +38,8 @@ const Portfolio: React.FC = () => {
       location: 'Paris 15ème',
       duration: '6h',
       client: 'Famille Martin',
-      beforeImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0052.jpg',
-      afterImage: '/publicimages/avant-apres/Cuisine/IMG-20250908-WA0062.jpg',
+      beforeImage: '/publicimages/Photos Avant Après/Une cuisine transformée/Avant.jpg',
+      afterImage: '/publicimages/Photos Avant Après/Une cuisine transformée/Après.jpg',
       description: 'Réorganisation complète pour un espace fonctionnel et agréable à vivre.',
       challenges: [
         'Espace réduit à optimiser',
@@ -60,8 +60,8 @@ const Portfolio: React.FC = () => {
       location: 'Paris 11ème',
       duration: '5h',
       client: 'Couple Rousseau',
-      beforeImage: '/publicimages/avant-apres/cuisine 2/20250908_131742000_iOS.png',
-      afterImage: '/publicimages/avant-apres/cuisine 2/IMG-20250908-WA0039.jpg',
+      beforeImage: '/publicimages/Photos Avant Après/Fluidité retrouvée/Avant.png',
+      afterImage: '/publicimages/Photos Avant Après/Fluidité retrouvée/Après.jpg',
       description: 'Chaque placard optimisé pour cuisiner sans perte de temps.',
       challenges: [
         'Deux personnes utilisent la cuisine',
@@ -82,8 +82,8 @@ const Portfolio: React.FC = () => {
       location: 'Clouange',
       duration: '3h',
       client: 'Mme Dubois',
-      beforeImage: '/publicimages/avant-apres/Cuisine épices/IMG-20250905-WA0012.jpg',
-      afterImage: '/publicimages/avant-apres/Cuisine épices/20250908_133850000_iOS.jpg',
+      beforeImage: '/publicimages/Photos Avant Après/Un coin épices simplifié/Avant.jpg',
+      afterImage: '/publicimages/Photos Avant Après/Un coin épices simplifié/Après.jpg',
       description: 'Des étagères encombrées à un système clair et accessible au quotidien.',
       challenges: [
         'Produits mélangés sans logique',
@@ -139,6 +139,28 @@ const Portfolio: React.FC = () => {
         'Organisation par fréquence d\'usage',
         'Contenants étanches',
         'Étiquetage résistant à l\'humidité'
+      ]
+    },
+    {
+      id: 7,
+      category: 'rangement',
+      title: 'Un placard qui respire enfin',
+      location: 'Paris 12ème',
+      duration: '3h',
+      client: 'M. Blanchard',
+      beforeImage: '/publicimages/Photos Avant Après/Un placard qui respire enfin/Avant.jpg',
+      afterImage: '/publicimages/Photos Avant Après/Un placard qui respire enfin/Après.jpg',
+      description: 'Optimisation complète d\'un placard encombré pour retrouver visibilité et accessibilité.',
+      challenges: [
+        'Placard saturé sans organisation',
+        'Objets difficiles à retrouver',
+        'Perte d\'espace utile'
+      ],
+      solutions: [
+        'Tri par fréquence d\'utilisation',
+        'Rangements modulaires',
+        'Système d\'étiquetage clair',
+        'Optimisation verticale'
       ]
     }
   ];
@@ -216,12 +238,12 @@ const Portfolio: React.FC = () => {
             ))}
           </div>
 
-          <motion.div 
+          <motion.div
+            key={selectedCategory}
             className="portfolio-grid"
             variants={containerVariants}
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
+            animate="visible"
           >
             {filteredItems.map(item => (
               <motion.div 

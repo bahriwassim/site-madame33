@@ -68,7 +68,7 @@ const Links: React.FC = () => {
         },
         {
           title: 'Zones d\'intervention',
-          description: 'Paris, Luxembourg, Clouange et en ligne',
+          description: 'Paris, Luxembourg, et en ligne',
           url: '/contact',
           icon: <FaIcons.FaMapMarkerAlt />
         }

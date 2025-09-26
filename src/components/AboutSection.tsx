@@ -22,7 +22,7 @@ const AboutSection: React.FC = () => {
               </p>
               
               <p>
-           Mon approche est simple : efficacité, respect et bienveillance. Mon objectif est de vous permettre de reprendre le contrôle de votre espace de vie, tout en préservant l’harmonie familiale et votre intimité. 
+           Mon approche est simple : efficacité, respect et bienveillance. Mon objectif est de vous aider de reprendre le contrôle de votre espace de vie, tout en préservant l’harmonie familiale et votre intimité. 
 
               </p>
 
@@ -46,7 +46,7 @@ const AboutSection: React.FC = () => {
           <div className="about-section__image">
             <div className="about-section__image-container">
               <img 
-                src="/publicimages/qui.JPG" 
+                src="/publicimages/qui.jpg" 
                 alt="Organisation professionnelle" 
                 className="about-section__img"
               />

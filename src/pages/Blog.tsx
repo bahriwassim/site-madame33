@@ -1,86 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { blogArticles, getBlogArticlesByCategory } from '../data/blogData';
 import '../styles/Blog.css';
 
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: '10 astuces pour organiser sa cuisine comme un pro',
-      excerpt: 'Découvrez mes conseils d\'experte pour transformer votre cuisine en espace fonctionnel et agréable à vivre.',
-      category: 'cuisine',
-      date: '2024-03-15',
-      readTime: '5 min',
-      image: '/publicimages/IMG_5681.JPG',
-      tags: ['cuisine', 'organisation', 'astuces']
-    },
-    {
-      id: 2,
-      title: 'Comment faire le tri dans son dressing efficacement',
-      excerpt: 'Guide étape par étape pour trier vos vêtements et créer un dressing organisé qui vous fait gagner du temps.',
-      category: 'dressing',
-      date: '2024-03-12',
-      readTime: '7 min',
-      image: '/publicimages/IMG_5682.JPG',
-      tags: ['dressing', 'tri', 'garde-robe']
-    },
-    {
-      id: 3,
-      title: 'Organiser la chambre des enfants : mission possible !',
-      excerpt: 'Mes techniques pour créer un espace organisé et ludique qui encourage l\'autonomie de vos enfants.',
-      category: 'enfants',
-      date: '2024-03-10',
-      readTime: '6 min',
-      image: '/publicimages/IMG_5683.JPG',
-      tags: ['enfants', 'autonomie', 'rangement']
-    },
-    {
-      id: 4,
-      title: 'L\'art de l\'étiquetage : pourquoi et comment',
-      excerpt: 'L\'étiquetage est un outil puissant pour maintenir l\'ordre. Découvrez comment l\'utiliser efficacement.',
-      category: 'methodes',
-      date: '2024-03-08',
-      readTime: '4 min',
-      image: '/publicimages/IMG_5684.JPG',
-      tags: ['étiquetage', 'organisation', 'méthode']
-    },
-    {
-      id: 5,
-      title: '5 erreurs courantes en organisation maison',
-      excerpt: 'Évitez ces pièges fréquents qui peuvent compromettre vos efforts d\'organisation à long terme.',
-      category: 'conseils',
-      date: '2024-03-05',
-      readTime: '8 min',
-      image: '/publicimages/IMG_5685.JPG',
-      tags: ['erreurs', 'conseils', 'organisation']
-    },
-    {
-      id: 6,
-      title: 'Créer des routines familiales qui fonctionnent',
-      excerpt: 'Comment mettre en place des routines d\'organisation qui impliquent toute la famille.',
-      category: 'famille',
-      date: '2024-03-03',
-      readTime: '9 min',
-      image: '/publicimages/IMG_5686.JPG',
-      tags: ['routine', 'famille', 'habitudes']
-    }
-  ];
-
   const categories = [
-    { id: 'all', name: 'Tous les articles', count: blogPosts.length },
-    { id: 'cuisine', name: 'Cuisine', count: blogPosts.filter(post => post.category === 'cuisine').length },
-    { id: 'dressing', name: 'Dressing', count: blogPosts.filter(post => post.category === 'dressing').length },
-    { id: 'enfants', name: 'Enfants', count: blogPosts.filter(post => post.category === 'enfants').length },
-    { id: 'methodes', name: 'Méthodes', count: blogPosts.filter(post => post.category === 'methodes').length },
-    { id: 'conseils', name: 'Conseils', count: blogPosts.filter(post => post.category === 'conseils').length },
-    { id: 'famille', name: 'Famille', count: blogPosts.filter(post => post.category === 'famille').length }
+    { id: 'all', name: 'Tous les articles', count: blogArticles.length },
+    { id: 'cuisine', name: 'Cuisine', count: blogArticles.filter(post => post.category === 'cuisine').length },
+    { id: 'dressing', name: 'Dressing', count: blogArticles.filter(post => post.category === 'dressing').length },
+    { id: 'enfants', name: 'Enfants', count: blogArticles.filter(post => post.category === 'enfants').length },
+    { id: 'methodes', name: 'Méthodes', count: blogArticles.filter(post => post.category === 'methodes').length },
+    { id: 'conseils', name: 'Conseils', count: blogArticles.filter(post => post.category === 'conseils').length },
+    { id: 'famille', name: 'Famille', count: blogArticles.filter(post => post.category === 'famille').length }
   ];
 
-  const filteredPosts = selectedCategory === 'all' 
-    ? blogPosts 
-    : blogPosts.filter(post => post.category === selectedCategory);
+  const filteredPosts = getBlogArticlesByCategory(selectedCategory);
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -91,8 +27,8 @@ const Blog: React.FC = () => {
     });
   };
 
-  const featuredPost = blogPosts[0];
-  const recentPosts = blogPosts.slice(1, 4);
+  const featuredPost = blogArticles[0];
+  const recentPosts = blogArticles.slice(1, 4);
 
   return (
     <div className="blog-page">

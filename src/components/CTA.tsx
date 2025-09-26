@@ -12,9 +12,7 @@ const CTA: React.FC = () => {
           <div className="cta__text">
             <h2 className="cta__title">Prêt à transformer votre maison ?</h2>
             <p className="cta__subtitle">
-            Contactez-moi pour un devis gratuit et personnalisé.
-Ensemble, créons un intérieur qui vous ressemble et qui respire la paix au quotidien.
-
+Un intérieur organisé, un quotidien allégé. Demandez votre devis gratuit.
             </p>
             
             <div className="cta__features">

@@ -9,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
 import Blog from './pages/Blog';
+import BlogArticle from './pages/BlogArticle';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import Links from './pages/Links';
@@ -37,6 +38,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogArticle />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/liens-utiles" element={<Links />} />

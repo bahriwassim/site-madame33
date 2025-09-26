@@ -94,6 +94,7 @@ const ServicesSection: React.FC = () => {
                       <span className="tarif-prix">{tarif.prix}</span>
                     </div>
                   ))}
+                  
                 </div>
                 <p className="prestation-card__description">{prestation.description}</p>
                 <Link to="/contact" className="btn btn-secondary">
@@ -102,6 +103,10 @@ const ServicesSection: React.FC = () => {
               </div>
             ))}
           </div>
+          <br / >
+          <p style={{textAlign: 'center'}} >Chaque prestation, à domicile ou en ligne, inclut un suivi d’un mois pour garantir la bonne mise en place des solutions.
+          </p>
+
         </div>
 
       </div>

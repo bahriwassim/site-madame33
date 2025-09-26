@@ -65,8 +65,14 @@ const PortfolioSection: React.FC = () => {
     { id: 'enfants', name: 'Chambre des enfants' }
   ];
 
+  // Afficher spécifiquement "Un coin épices simplifié" et "Des linges bien rangés"
+  const featuredItems = [
+    portfolioItems.find(item => item.title === 'Un coin épices simplifié'),
+    portfolioItems.find(item => item.title === 'Des linges bien rangés')
+  ].filter((item): item is NonNullable<typeof item> => item !== undefined);
+
   const filteredItems = selectedCategory === 'all'
-    ? portfolioItems.slice(0, 2)
+    ? featuredItems
     : portfolioItems.filter(item => item.category === selectedCategory).slice(0, 2);
 
   const containerVariants = {

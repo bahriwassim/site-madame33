@@ -21,22 +21,22 @@ const FAQ: React.FC = () => {
         {
           id: 1,
           question: 'Combien de temps dure une prestation d\'organisation ?',
-          answer: 'La durée varie selon la taille de l\'espace et vos besoins. En général, comptez 3h pour une pièce standard (cuisine, chambre), 6h pour un espace plus grand (salon, dressing familial) ou une journée complète pour plusieurs pièces. Je vous donne une estimation précise lors de notre premier échange.'
+          answer: 'La durée dépend de la taille de l’espace et de vos besoins. Comptez en général entre une demi-journée et une journée par pièce. Une estimation précise est donnée dès notre premier échange.'
         },
         {
           id: 2,
           question: 'Dois-je acheter du matériel de rangement avant votre venue ?',
-          answer: 'Non, je vous recommande d\'attendre notre première rencontre. Après analyse de vos espaces et de vos habitudes, je vous conseillerai précisément sur le matériel adapté. Cela évite les achats inutiles et garantit des solutions durables.'
+          answer: 'Non, mieux vaut attendre notre première rencontre. Mircea Organise vous conseille le matériel adapté pour éviter les achats inutiles et garantir des solutions durables.'
         },
         {
           id: 3,
           question: 'Proposez-vous des prestations le weekend ?',
-          answer: 'Oui, je propose des créneaux le samedi pour s\'adapter à vos contraintes professionnelles. Les dimanches sont réservés aux urgences ou projets spéciaux. N\'hésitez pas à me contacter pour discuter de vos disponibilités.'
+          answer: 'Oui, le samedi uniquement. Pour toute demande particulière, contactez-nous afin de trouver le créneau qui vous convient.'
         },
         {
           id: 4,
           question: 'Que se passe-t-il si je ne suis pas satisfait(e) du résultat ?',
-          answer: 'Votre satisfaction est ma priorité. Si le résultat ne correspond pas à vos attentes, je m\'engage à revenir gratuitement pour ajuster l\'organisation. Un suivi est inclus dans toutes mes prestations pour garantir la durabilité des solutions mises en place.'
+          answer: 'Votre satisfaction est notre priorité. Nous ajustons les solutions si besoin, avec un suivi inclus pendant un mois pour garantir des résultats durables.'
         }
       ]
     },
@@ -61,22 +61,22 @@ const FAQ: React.FC = () => {
       ]
     },
     {
-      title: 'Modalités',
+      title: 'Modalités & Tarification',
       items: [
         {
           id: 8,
-          question: 'Comment fonctionne le devis ?',
-          answer: 'Chaque projet est unique et nécessite une évaluation personnalisée. Je propose un devis gratuit et détaillé après notre premier échange pour comprendre vos besoins spécifiques.'
+          question: 'Comment sont calculés vos tarifs ?',
+          answer: 'Ils dépendent de la durée, de la taille de l’espace et de la complexité du projet. Des forfaits personnalisés peuvent être proposés et chaque devis est gratuit et adapté à vos besoins.'
         },
         {
           id: 9,
           question: 'Acceptez-vous les paiements échelonnés ?',
-          answer: 'Oui, pour les projets importants (plusieurs jours), je peux proposer un échelonnement du paiement. Nous discutons ensemble des modalités qui vous conviennent le mieux lors de l\'établissement du devis.'
+          answer: 'Oui, pour les projets de plusieurs jours. Les modalités sont définies ensemble au moment du devis.'
         },
         {
           id: 10,
           question: 'Y a-t-il des frais de déplacement ?',
-          answer: 'Les déplacements sont inclus pour Paris intramuros, Luxembourg ville et Clouange. Pour les zones plus éloignées, des frais de déplacement peuvent s\'appliquer (calculés au réel). Je vous informe toujours à l\'avance.'
+          answer: 'Oui, les frais de déplacement ne sont pas inclus dans les prestations. Ils sont calculés selon la zone et toujours indiqués à l’avance, sans surprise.'
         }
       ]
     },
@@ -86,17 +86,17 @@ const FAQ: React.FC = () => {
         {
           id: 11,
           question: 'Comment se déroule une séance de coaching en ligne ?',
-          answer: 'Nous nous connectons via Zoom ou Teams. Vous me montrez votre espace en visio, nous analysons ensemble la situation et je vous guide étape par étape. Je vous envoie ensuite un plan d\'action personnalisé avec des conseils pratiques.'
+          answer: 'En visioconférence via Zoom ou Teams. Vous présentez votre espace, nous analysons ensemble, puis vous recevez un plan d’action personnalisé.'
         },
         {
           id: 12,
           question: 'Le coaching en ligne est-il aussi efficace qu\'à domicile ?',
-          answer: 'Oui ! Le coaching en ligne permet une grande flexibilité et des suivis réguliers. C\'est idéal pour l\'accompagnement, la motivation et les conseils personnalisés. Pour les gros projets de tri, la prestation à domicile reste plus adaptée.'
+          answer: 'Oui, il offre flexibilité et suivi régulier. Pour les grands projets (gros tri, plusieurs pièces), l’intervention à domicile reste préférable.'
         },
         {
           id: 13,
-          question: 'Proposez-vous un suivi après la séance ?',
-          answer: 'Absolument ! Chaque séance inclut un suivi par email ou WhatsApp. Pour les packs mensuels, je propose 4 séances + support continu. L\'objectif est de vous accompagner vers l\'autonomie complète.'
+          question: 'Proposez-vous un suivi après la séance (en ligne ou à domicile)?',
+          answer: 'Oui, chaque séance inclut un suivi par e-mail ou WhatsApp pendant un mois afin de répondre à vos questions et vous guider.'
         }
       ]
     },
@@ -106,17 +106,17 @@ const FAQ: React.FC = () => {
         {
           id: 14,
           question: 'Combien de temps les résultats durent-ils ?',
-          answer: 'Avec les bonnes méthodes et un minimum de maintenance, les résultats sont durables. Je vous forme aux techniques de maintien et fournis des guides personnalisés. Un suivi à 1 mois est inclus pour ajuster si nécessaire.'
+          answer: 'Avec les bonnes méthodes, ils durent dans le temps. Un suivi d’un mois après la prestation aide à maintenir vos nouvelles habitudes.'
         },
         {
           id: 15,
           question: 'Que faire si le désordre revient ?',
-          answer: 'C\'est normal au début ! L\'organisation est un apprentissage. Je propose des séances de "révision" à tarif préférentiel et des conseils pour retrouver rapidement l\'équilibre. L\'important est de ne pas abandonner.'
+          answer: 'C’est normal au début. Mircea Organise propose des séances de suivi à tarif préférentiel et des conseils pratiques pour retrouver rapidement l’équilibre.'
         },
         {
           id: 16,
           question: 'Travaillez-vous avec les enfants ?',
-          answer: 'Oui ! J\'adore impliquer les enfants dans l\'organisation de leur espace. J\'adapte mes méthodes à leur âge avec des systèmes ludiques et des pictogrammes. C\'est excellent pour développer leur autonomie et leur sens des responsabilités.'
+          answer: 'Oui, avec des méthodes ludiques et adaptées à leur âge (pictogrammes, codes couleurs). Cela développe leur autonomie et facilite la vie de toute la famille.'
         }
       ]
     }

@@ -72,7 +72,6 @@ const Contact: React.FC = () => {
   const locations = [
     'Paris et région parisienne',
     'Luxembourg',
-    'Clouange',
     'En ligne',
     'Autre (préciser dans le message)'
   ];
@@ -121,7 +120,6 @@ const Contact: React.FC = () => {
                 <h3><FaIcons.FaMap style={{marginRight: '8px'}} /> Zones d'intervention</h3>
                 <ul className="contact-zones">
                   <li><FaIcons.FaFlag style={{marginRight: '8px'}} /> Paris et région parisienne</li>
-                  <li><FaIcons.FaFlag style={{marginRight: '8px'}} /> Clouange</li>
                   <li><FaIcons.FaFlag style={{marginRight: '8px'}} /> Luxembourg</li>
                   <li><FaIcons.FaLaptop style={{marginRight: '8px'}} /> En ligne (monde entier)</li>
                 </ul>
@@ -130,9 +128,7 @@ const Contact: React.FC = () => {
               <div className="contact-info__section">
                 <h3><FaIcons.FaClock style={{marginRight: '8px'}} /> Délais d'intervention</h3>
                 <div className="contact-timing">
-                  <div className="timing-item">
-                    <strong>Urgence :</strong> 24-48h
-                  </div>
+                 
                   <div className="timing-item">
                     <strong>Standard :</strong> 3-7 jours
                   </div>
@@ -146,10 +142,11 @@ const Contact: React.FC = () => {
                 <h3><FaIcons.FaLightbulb style={{marginRight: '8px'}} /> Ce qui est inclus</h3>
                 <ul className="contact-included">
                   <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Devis gratuit et sans engagement</li>
-                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Première consultation téléphonique offerte</li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Première consultation téléphonique de 15 min offerte</li>
                   <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Plan d'action personnalisé</li>
-                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Suivi post-intervention inclus</li>
-                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Conseils de maintien sur mesure</li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Suivi d’un mois inclus après l’intervention               </li>
+                  <li><FaIcons.FaCheck style={{marginRight: '8px'}} /> Conseils de maintien adaptés à votre quotidien
+                  </li>
                 </ul>
               </div>
             </div>
@@ -291,8 +288,8 @@ const Contact: React.FC = () => {
           <div className="contact-cta__content">
             <h2>Besoin d'une réponse rapide ?</h2>
             <p>
-              Pour les demandes urgentes ou si vous préférez un contact direct, 
-              n'hésitez pas à m'appeler. Je suis à votre écoute !
+            Vous pouvez me contacter facilement pour en discuter directement. Je serai ravie de vous aider.
+
             </p>
             <WhatsAppButton 
               phoneNumber="+352691210680" 

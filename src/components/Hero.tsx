@@ -9,12 +9,12 @@ const Hero: React.FC = () => {
     {
       image: '/publicimages/IMG_5681.JPG',
       title: 'Ranger, c’est libérer de l’espace pour vivre ',
-      subtitle: 'Redonner souffle et clarté à votre intérieur'
+      subtitle: 'Redonner souffle et clarté à votre intérieur.'
     },
     {
       image: '/publicimages/IMG_5682.JPG',
       title: 'Votre maison mérite d’être un lien de paix',
-      subtitle: 'Organisation personnalisée, pensée pour vous et votre famille'
+      subtitle: 'Organisation personnalisée, pensée pour vous et votre famille.'
     },
     {
       image: '/publicimages/IMG_5683.JPG',
@@ -81,19 +81,31 @@ const Hero: React.FC = () => {
         <div className="container">
           <div className="hero__values-grid">
             <div className="hero__value">
-              <h3><FaIcons.FaHeart style={{marginRight: '8px'}} /> Amour</h3>
+              <div className="hero__value-icon">
+                <FaIcons.FaHeart />
+              </div>
+              <h3>Amour</h3>
               <p>Avec passion et bienveillance</p>
             </div>
             <div className="hero__value">
-              <h3><FaIcons.FaUsers style={{marginRight: '8px'}} /> Famille</h3>
+              <div className="hero__value-icon">
+                <FaIcons.FaUsers />
+              </div>
+              <h3>Famille</h3>
               <p>Pour tous les membres de votre foyer</p>
             </div>
             <div className="hero__value">
-              <h3><FaIcons.FaMagic style={{marginRight: '8px'}} /> Créativité</h3>
+              <div className="hero__value-icon">
+                <FaIcons.FaMagic />
+              </div>
+              <h3>Créativité</h3>
               <p>Des solutions innovantes et personnalisées</p>
             </div>
             <div className="hero__value">
-              <h3><FaIcons.FaShieldAlt style={{marginRight: '8px'}} /> Sécurité</h3>
+              <div className="hero__value-icon">
+                <FaIcons.FaShieldAlt />
+              </div>
+              <h3>Sécurité</h3>
               <p>Confidentialité et respect total</p>
             </div>
           </div>

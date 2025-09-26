@@ -18,7 +18,7 @@ const Services: React.FC = () => {
         'Optimisation des circuits de travail',
         'Conseils en aménagement'
       ],
-      image: '/publicimages/IMG_5681.JPG',
+      image: '/publicimages/Photos - nos services/Cuisine/The Best Pantry Organization Ideas.jpeg',
       duration: '3-6h'
     },
     {
@@ -33,7 +33,7 @@ const Services: React.FC = () => {
         'Conseils en rangement vertical',
         'Solutions sur mesure'
       ],
-      image: '/publicimages/IMG_5682.JPG',
+      image: '/publicimages/Photos - nos services/Dressing/1ca903a9-7088-4d2c-93d9-9821e701f21f.jpeg',
       duration: '4-8h'
     },
     {
@@ -48,7 +48,7 @@ const Services: React.FC = () => {
         'Solutions à hauteur d\'enfant',
         'Formation à l\'autonomie'
       ],
-      image: '/publicimages/IMG_5683.JPG',
+      image: '/publicimages/Photos - nos services/chambre enfants_files/0873736b-a39b-44ff-af28-7ecb8fbf5fdb.jpeg',
       duration: '2-4h'
     },
     {
@@ -63,7 +63,7 @@ const Services: React.FC = () => {
         'Stockage intelligent',
         'Solutions gain de place'
       ],
-      image: '/publicimages/IMG_5684.JPG',
+      image: '/publicimages/Photos - nos services/Buanderie/f09a7608-3537-47e1-8595-1be461e9484c.jpeg',
       duration: '2-3h'
     }
   ];
@@ -72,16 +72,16 @@ const Services: React.FC = () => {
     {
       type: 'Prestations à domicile',
       subtitle: 'Intervention directe chez vous',
-      zones: ['Paris et région parisienne', 'Luxembourg', 'Clouange'],
+      zones: ['Paris et région parisienne', 'Luxembourg'],
       tarifs: [
-        { service: 'Prestation 3h', description: 'Idéal pour un espace spécifique' },
-        { service: 'Journée complète (6h)', description: 'Pour plusieurs espaces' },
-        { service: 'Pack 3 jours', description: 'Organisation complète maison' }
+        { service: 'Pack Découverte ', description: 'Idéal pour réorganiser un espace spécifique. ' },
+        { service: 'Pack Sérénité', description: 'Une journée complète pour transformer plusieurs espaces.' },
+        { service: 'Pack Transformation', description: ' Un accompagnement sur plusieurs jours pour un changement en profondeur.' }
       ],
       advantages: [
-        'Intervention sur site',
-        'Matériel fourni',
+        'Intervention à domicile',
         'Conseils personnalisés',
+        'Solutions durables',
         'Suivi inclus'
       ]
     },
@@ -90,15 +90,15 @@ const Services: React.FC = () => {
       subtitle: 'Accompagnement à distance via visioconférence',
       zones: ['Disponible partout dans le monde'],
       tarifs: [
-        { service: 'Séance 1h', description: 'Conseils ciblés' },
-        { service: 'Pack 3h', description: 'Projet complet' },
-        { service: 'Suivi 1 mois', description: '4 séances + support WhatsApp' }
+        { service: 'Séance conseil', description: ' Une rencontre ciblée pour répondre à vos besoins immédiats.' },
+        { service: 'Accompagnement pratique', description: 'Plusieurs séances pour avancer ensemble, étape par étape.' },
+        { service: 'Pack Confort ', description: 'Un mois d’accompagnement pour ancrer vos nouvelles habitudes.' }
       ],
       advantages: [
         'Flexibilité horaire',
-        'Support continu',
-        'Économique',
-        'Replay des séances'
+        'Suivi inclus',
+        'Accessible partout',
+        'Conseils pratiques'
       ]
     }
   ];
