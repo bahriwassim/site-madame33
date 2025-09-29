@@ -419,7 +419,7 @@
 
   .blog-article-sidebar {
     position: static;
-    order: -1;
+    order: 1;
   }
 
   .blog-sidebar__section {
@@ -476,4 +476,32 @@
   .blog-sidebar__section {
     padding: 1.5rem;
   }
+}
+
+/* Newsletter form messages */
+.newsletter-form__message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsletter-form__message--success {
+  background-color: rgba(37, 211, 102, 0.1);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.newsletter-form__message--error {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
+.newsletter-form__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }

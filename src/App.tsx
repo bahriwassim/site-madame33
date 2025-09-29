@@ -13,6 +13,9 @@ import BlogArticle from './pages/BlogArticle';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 import Links from './pages/Links';
+import MentionsLegales from './pages/MentionsLegales';
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite';
+import Cookies from './pages/Cookies';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,6 +45,9 @@ function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/liens-utiles" element={<Links />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+            <Route path="/cookies" element={<Cookies />} />
           </Routes>
         </main>
         <Footer />

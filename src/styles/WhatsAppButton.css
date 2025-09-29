@@ -14,6 +14,7 @@
   border: none;
   outline: none;
   white-space: nowrap;
+  flex-direction: row;
 }
 
 /* Variantes de couleur */
@@ -36,6 +37,14 @@
   box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
 }
 
+.whatsapp-btn--secondary .whatsapp-btn__text {
+  color: #25D366;
+}
+
+.whatsapp-btn--secondary .whatsapp-btn__icon {
+  color: #25D366;
+}
+
 .whatsapp-btn--secondary:hover {
   background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: white;
@@ -43,16 +52,85 @@
   transform: translateY(-2px);
 }
 
+.whatsapp-btn--secondary:hover .whatsapp-btn__text {
+  color: white !important;
+}
+
+.whatsapp-btn--secondary:hover .whatsapp-btn__icon {
+  color: white !important;
+}
+
+/* Styles spécifiques pour les boutons dans les sections CTA */
+.cta__btn-primary.whatsapp-btn--secondary:hover .whatsapp-btn__text,
+.cta__btn-primary.whatsapp-btn--secondary:hover .whatsapp-btn__icon {
+  color: white !important;
+}
+
+/* Styles spécifiques pour les boutons dans les pages */
+.contact-cta .whatsapp-btn--secondary:hover .whatsapp-btn__text,
+.contact-cta .whatsapp-btn--secondary:hover .whatsapp-btn__icon,
+.services-cta .whatsapp-btn--secondary:hover .whatsapp-btn__text,
+.services-cta .whatsapp-btn--secondary:hover .whatsapp-btn__icon,
+.links-cta .whatsapp-btn--secondary:hover .whatsapp-btn__text,
+.links-cta .whatsapp-btn--secondary:hover .whatsapp-btn__icon {
+  color: white !important;
+}
+
 .whatsapp-btn--outline {
   background: transparent;
   color: #25D366;
   border: 2px solid #25D366;
+  font-weight: 600;
 }
 
 .whatsapp-btn--outline:hover {
   background: #25D366;
   color: white;
   transform: translateY(-2px);
+}
+
+.whatsapp-btn--outline:hover .whatsapp-btn__text {
+  color: white;
+}
+
+.whatsapp-btn--outline:hover .whatsapp-btn__icon {
+  color: white;
+}
+
+/* Footer specific secondary button */
+.footer__contact-item.whatsapp-btn--secondary {
+  background: linear-gradient(135deg, var(--white) 0%, var(--soft-gray) 100%);
+  color: #25D366;
+  border: 2px solid #25D366;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
+  font-size: 0.8rem;
+  white-space: nowrap;
+  padding: 8px 16px;
+  line-height: 1.3;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.footer__contact-item.whatsapp-btn--secondary .whatsapp-btn__text {
+  color: #25D366;
+}
+
+.footer__contact-item.whatsapp-btn--secondary .whatsapp-btn__icon {
+  color: #25D366;
+}
+
+.footer__contact-item.whatsapp-btn--secondary:hover {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+  border-color: #25D366;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+  transform: translateY(-2px);
+}
+
+.footer__contact-item.whatsapp-btn--secondary:hover .whatsapp-btn__text,
+.footer__contact-item.whatsapp-btn--secondary:hover .whatsapp-btn__icon {
+  color: white;
 }
 
 .whatsapp-btn--floating {
@@ -109,12 +187,23 @@
   font-size: 1.8rem;
 }
 
+/* Mobile specific floating button */
+@media (max-width: 768px) {
+  .whatsapp-btn--floating {
+    width: 70px;
+    height: 70px;
+    bottom: 25px;
+    right: 25px;
+    font-size: 1.8rem;
+  }
+}
+
 /* Icône */
 .whatsapp-btn__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
 .whatsapp-btn--floating .whatsapp-btn__icon {

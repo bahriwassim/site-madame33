@@ -362,6 +362,33 @@
   background-color: var(--text-dark);
 }
 
+.newsletter-form__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.newsletter-form__message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsletter-form__message--success {
+  background-color: rgba(37, 211, 102, 0.1);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.newsletter-form__message--error {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
 .help-card p {
   margin-bottom: 20px;
   color: var(--text-dark);

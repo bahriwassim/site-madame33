@@ -1,10 +1,50 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 import { blogArticles, getBlogArticlesByCategory } from '../data/blogData';
 import '../styles/Blog.css';
 
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting || !newsletterEmail) return;
+    
+    setIsSubmitting(true);
+    setNewsletterStatus('idle');
+
+    try {
+      const payload = {
+        email: newsletterEmail,
+        _subject: 'Nouvelle inscription newsletter - Mircea Organise',
+        _captcha: 'false'
+      };
+
+      const response = await fetch('https://formsubmit.co/ajax/mircea.delgado@hotmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error('Submit failed');
+      }
+
+      setNewsletterStatus('success');
+      setNewsletterEmail('');
+    } catch (error) {
+      setNewsletterStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const categories = [
     { id: 'all', name: 'Tous les articles', count: blogArticles.length },
@@ -141,16 +181,37 @@ const Blog: React.FC = () => {
               <div className="blog-sidebar__section">
                 <h3>Newsletter</h3>
                 <p>Recevez mes derniers conseils organisation directement dans votre boîte mail.</p>
-                <form className="newsletter-form">
+                <form className="newsletter-form" onSubmit={handleNewsletterSubmit}>
                   <input 
                     type="email" 
                     placeholder="Votre email"
                     className="newsletter-form__input"
+                    value={newsletterEmail}
+                    onChange={(e) => setNewsletterEmail(e.target.value)}
+                    required
                   />
-                  <button type="submit" className="newsletter-form__button">
-                    S'abonner
+                  <button 
+                    type="submit" 
+                    className="newsletter-form__button"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? 'Envoi...' : 'S\'abonner'}
                   </button>
                 </form>
+                
+                {newsletterStatus === 'success' && (
+                  <div className="newsletter-form__message newsletter-form__message--success">
+                    <FaIcons.FaCheckCircle style={{marginRight: '8px'}} /> 
+                    Inscription réussie ! Merci de votre confiance.
+                  </div>
+                )}
+
+                {newsletterStatus === 'error' && (
+                  <div className="newsletter-form__message newsletter-form__message--error">
+                    <FaIcons.FaTimesCircle style={{marginRight: '8px'}} /> 
+                    Une erreur s'est produite. Veuillez réessayer.
+                  </div>
+                )}
               </div>
 
               <div className="blog-sidebar__section">

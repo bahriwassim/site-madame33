@@ -159,6 +159,33 @@
   transform: translateY(-2px);
 }
 
+.newsletter__button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.newsletter__message {
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.newsletter__message--success {
+  background-color: rgba(37, 211, 102, 0.1);
+  color: #25D366;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.newsletter__message--error {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+  border: 1px solid rgba(220, 53, 69, 0.3);
+}
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;

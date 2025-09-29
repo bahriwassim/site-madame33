@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaHome, FaStar, FaBullseye } from 'react-icons/fa';
+import { FaHome } from 'react-icons/fa';
 import WhatsAppButton from './WhatsAppButton';
 import '../styles/CTA.css';
 
@@ -37,18 +37,21 @@ Un intérieur organisé, un quotidien allégé. Demandez votre devis gratuit.
               </div>
 
             <div className="cta__buttons">
-              <Link to="/contact" className="btn btn-primary cta__btn-primary">
-                Demander un devis gratuit
-              </Link>
               <WhatsAppButton 
                 phoneNumber="+352691210680" 
                 message="Bonjour, je souhaite organiser un rendez-vous pour vos services d'organisation."
                 variant="secondary"
-                size="medium"
+                size="large"
                 className="cta__btn-primary"
               >
-                Contact sur whatsapp 
+                Contact sur whatsapp
               </WhatsAppButton>
+              <Link 
+                to="/contact" 
+                className="btn btn-primary cta__btn-primary"
+              >
+                Demander un devis gratuit
+              </Link>
             </div>
           </div>
           

@@ -1,10 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import * as FaIcons from 'react-icons/fa';
 import WhatsAppButton from './WhatsAppButton';
 import '../styles/Footer.css';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting || !newsletterEmail) return;
+    
+    setIsSubmitting(true);
+    setNewsletterStatus('idle');
+
+    try {
+      const payload = {
+        email: newsletterEmail,
+        _subject: 'Nouvelle inscription newsletter - Mircea Organise',
+        _captcha: 'false'
+      };
+
+      const response = await fetch('https://formsubmit.co/ajax/mircea.delgado@hotmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error('Submit failed');
+      }
+
+      setNewsletterStatus('success');
+      setNewsletterEmail('');
+    } catch (error) {
+      setNewsletterStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <footer className="footer">
@@ -51,11 +91,12 @@ const Footer: React.FC = () => {
               <WhatsAppButton 
                 phoneNumber="+352691210680" 
                 message="Bonjour, je souhaite obtenir des informations sur vos services d'organisation."
-                variant="outline"
+                variant="secondary"
                 size="small"
                 className="footer__contact-item"
               >
-Discutons sur WhatsApp              </WhatsAppButton>
+                Contact sur whatsapp
+              </WhatsAppButton>
               <div className="footer__zones">
                 <p><strong>Zones d'intervention :</strong></p>
                 <ul>
@@ -72,16 +113,37 @@ Discutons sur WhatsApp              </WhatsAppButton>
           <div className="newsletter">
             <h4>Newsletter</h4>
             <p>Recevez nos conseils organisation et nos actualités</p>
-            <form className="newsletter__form">
+            <form className="newsletter__form" onSubmit={handleNewsletterSubmit}>
               <input 
                 type="email" 
                 placeholder="Votre adresse email"
                 className="newsletter__input"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
               />
-              <button type="submit" className="newsletter__button">
-                S'abonner
+              <button 
+                type="submit" 
+                className="newsletter__button"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Envoi...' : 'S\'abonner'}
               </button>
             </form>
+            
+            {newsletterStatus === 'success' && (
+              <div className="newsletter__message newsletter__message--success">
+                <FaIcons.FaCheckCircle style={{marginRight: '8px'}} /> 
+                Inscription réussie ! Merci de votre confiance.
+              </div>
+            )}
+
+            {newsletterStatus === 'error' && (
+              <div className="newsletter__message newsletter__message--error">
+                <FaIcons.FaTimesCircle style={{marginRight: '8px'}} /> 
+                Une erreur s'est produite. Veuillez réessayer.
+              </div>
+            )}
           </div>
         </div>
 
