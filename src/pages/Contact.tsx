@@ -23,25 +23,39 @@ const Contact: React.FC = () => {
     message: '',
     acceptTerms: false
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value, type } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
-    }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (isSubmitting) return;
     setIsSubmitting(true);
-    
-    // Simulation d'envoi (remplacer par vraie logique)
+    setSubmitStatus('idle');
+
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const payload = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        location: formData.location,
+        message: formData.message,
+        _subject: 'Nouvelle demande de contact - Mircea Organise',
+        _captcha: 'false'
+      };
+
+      const response = await fetch('https://formsubmit.co/ajax/mircea.delgado@hotmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      });
+
+      if (!response.ok) {
+        throw new Error('Submit failed');
+      }
+
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -58,6 +72,16 @@ const Contact: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value, type } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
+    }));
+  };
+
+  
 
   const services = [
     'Organisation cuisine',
@@ -154,6 +178,7 @@ const Contact: React.FC = () => {
             <div className="contact-form-container">
               <form className="contact-form" onSubmit={handleSubmit}>
                 <h2>Demander un devis gratuit</h2>
+                {/* Envoi via AJAX (pas de redirection) */}
                 
                 <div className="form-row">
                   <div className="form-group">
