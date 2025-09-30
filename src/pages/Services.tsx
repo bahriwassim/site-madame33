@@ -218,7 +218,7 @@ const Services: React.FC = () => {
                 variant="secondary"
                 size="medium"
               >
-                +352 691 210 680
+               Contact sur whatsapp
               </WhatsAppButton>
             </div>
           </div>

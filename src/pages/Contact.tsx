@@ -133,8 +133,8 @@ const Contact: React.FC = () => {
                     variant="primary"
                     size="large"
                   >
-                    +352 691 210 680
-                  </WhatsAppButton>
+               Contact sur whatsapp
+               </WhatsAppButton>
                   <p>Disponible du lundi au samedi, 9h-18h</p>
                   <small>Première consultation de 15min offerte</small>
                 </div>
